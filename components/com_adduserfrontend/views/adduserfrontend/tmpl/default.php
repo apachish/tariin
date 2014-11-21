@@ -657,6 +657,7 @@ $sqladdition = "";
 $query = "SELECT id,title,parent_id FROM #__usergroups WHERE id > 9 order by title";
 $db->setQuery($query);
 $result = $db->loadRowList();
+
 // Get the parentids of each custom usergroup
 foreach ($result as $acustomusergroup) { // For each custom usergroup
 // Get first parent_id of the custom usergroup

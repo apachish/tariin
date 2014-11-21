@@ -1,14 +1,15 @@
 <?php
 /**
- * @package     Joomla.Site
+ * @package     Joomla.Administrator
  * @subpackage  Templates.protostar
  *
- * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
+ * @copyright   Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 defined('_JEXEC') or die;
-
+$user = JFactory::getUser();
+if($user->guest){
 // Getting params from template
 $params = JFactory::getApplication()->getTemplate(true)->params;
 
@@ -36,13 +37,12 @@ else
 
 // Add JavaScript Frameworks
 JHtml::_('bootstrap.framework');
-$doc->addScript('templates/' .$this->template. '/js/template.js');
 
 // Add Stylesheets
 $doc->addStyleSheet('templates/'.$this->template.'/css/template.css');
 
-// Load optional RTL Bootstrap CSS
-JHtml::_('bootstrap.loadCss', false, $this->direction);
+// Load optional rtl Bootstrap css and Bootstrap bugfixes
+JHtmlBootstrap::loadCss($includeMaincss = false, $this->direction);
 
 // Add current user information
 $user = JFactory::getUser();
@@ -68,7 +68,7 @@ else
 // Logo file or site title param
 if ($this->params->get('logoFile'))
 {
-	$logo = '<img src="'. JUri::root() . $this->params->get('logoFile') .'" alt="'. $sitename .'" />';
+	$logo = '<img src="'. JURI::root() . $this->params->get('logoFile') .'" alt="'. $sitename .'" />';
 }
 elseif ($this->params->get('sitetitle'))
 {
@@ -89,7 +89,7 @@ else
 	if ($this->params->get('googleFont'))
 	{
 	?>
-		<link href='//fonts.googleapis.com/css?family=<?php echo $this->params->get('googleFontName');?>' rel='stylesheet' type='text/css' />
+		<link href='http://fonts.googleapis.com/css?family=<?php echo $this->params->get('googleFontName');?>' rel='stylesheet' type='text/css' />
 		<style type="text/css">
 			h1,h2,h3,h4,h5,h6,.site-title{
 				font-family: '<?php echo str_replace('+', ' ', $this->params->get('googleFontName'));?>', sans-serif;
@@ -131,6 +131,30 @@ else
 	<!--[if lt IE 9]>
 		<script src="<?php echo $this->baseurl ?>/media/jui/js/html5.js"></script>
 	<![endif]-->
+    <link href="http://code.jquery.com/ui/1.9.0/themes/ui-darkness/jquery-ui.css" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.min.js"></script>
+
+    <!-- keyboard widget css & script (required) -->
+    <link href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/keyboard.css" rel="stylesheet">
+    <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/jquery.keyboard.js"></script>
+
+    <!-- keyboard extensions (optional) -->
+   <!-- <script src="<?php /*echo $this->baseurl */?>/templates/<?php /*echo $this->template */?>/js/jquery.mousewheel.js"></script>
+    <script src="<?php /*echo $this->baseurl */?>/templates/<?php /*echo $this->template */?>/js/jquery.keyboard.extension-typing.js"></script>
+    <script src="<?php /*echo $this->baseurl */?>/templates/<?php /*echo $this->template */?>/js/jquery.keyboard.extension-autocomplete.js"></script>
+-->
+    <!-- demo only -->
+   <!-- <link href="<?php /*echo $this->baseurl */?>/templates/<?php /*echo $this->template */?>/css/demo.css" rel="stylesheet">
+    <script src="<?php /*echo $this->baseurl */?>/templates/<?php /*echo $this->template */?>/js/demo.js"></script>
+    <script src="http://mottie.github.com/Jatt/js/jquery.jatt.min.js"></script> <!-- tooltips -->
+  <!--  <script src="<?php/*echo $this->baseurl */?>/templates/<?php /*/*echo $this->template */?>/js/jquery.chili-2.2.js"></script> <!-- syntax highlighting -->
+<!--    <script src="<?php /*echo $this->baseurl */?>/templates/<?php /*/echo $this->template */?>/js/recipes.js"></script>-->
+  <script>
+        $(function(){
+            $('.keyboard').keyboard();
+        });
+    </script>
 </head>
 
 <body class="site <?php echo $option
@@ -145,7 +169,7 @@ else
 	<div class="body">
 		<div class="container<?php echo ($params->get('fluidContainer') ? '-fluid' : '');?>">
 			<!-- Header -->
-			<header class="header" role="banner">
+			<div class="header">
 				<div class="header-inner clearfix">
 					<a class="brand pull-left" href="<?php echo $this->baseurl; ?>">
 						<?php echo $logo;?> <?php if ($this->params->get('sitedescription')) { echo '<div class="site-description">'. htmlspecialchars($this->params->get('sitedescription')) .'</div>'; } ?>
@@ -154,11 +178,11 @@ else
 						<jdoc:include type="modules" name="position-0" style="none" />
 					</div>
 				</div>
-			</header>
+			</div>
 			<?php if ($this->countModules('position-1')) : ?>
-			<nav class="navigation" role="navigation">
+			<div class="navigation">
 				<jdoc:include type="modules" name="position-1" style="none" />
-			</nav>
+			</div>
 			<?php endif; ?>
 			<jdoc:include type="modules" name="banner" style="xhtml" />
 			<div class="row-fluid">
@@ -171,14 +195,14 @@ else
 				</div>
 				<!-- End Sidebar -->
 				<?php endif; ?>
-				<main id="content" role="main" class="<?php echo $span;?>">
+				<div id="content" class="<?php echo $span;?>">
 					<!-- Begin Content -->
 					<jdoc:include type="modules" name="position-3" style="xhtml" />
 					<jdoc:include type="message" />
 					<jdoc:include type="component" />
 					<jdoc:include type="modules" name="position-2" style="none" />
 					<!-- End Content -->
-				</main>
+				</div>
 				<?php if ($this->countModules('position-7')) : ?>
 				<div id="aside" class="span3">
 					<!-- Begin Right Sidebar -->
@@ -190,20 +214,21 @@ else
 		</div>
 	</div>
 	<!-- Footer -->
-	<footer class="footer" role="contentinfo">
+	<div class="footer">
 		<div class="container<?php echo ($params->get('fluidContainer') ? '-fluid' : '');?>">
 			<hr />
 			<jdoc:include type="modules" name="footer" style="none" />
-			<p class="pull-right">
-				<a href="#top" id="back-top">
-					<?php echo JText::_('TPL_PROTOSTAR_BACKTOTOP'); ?>
-				</a>
-			</p>
-			<p>
-				&copy; <?php echo date('Y'); ?> <?php echo $sitename; ?>
-			</p>
+			<p class="pull-right"><a href="#top" id="back-top"><?php echo JText::_('TPL_PROTOSTAR_BACKTOTOP'); ?></a></p>
+			<p>&copy; <?php echo $sitename; ?> <?php echo date('Y');?></p>
 		</div>
-	</footer>
+	</div>
 	<jdoc:include type="modules" name="debug" style="none" />
 </body>
 </html>
+
+    <?php
+}else{
+    $app =& JFactory::getApplication();
+    $app->redirect('index.php?option=com_conversation&view=messages&Itemid=207');
+}
+?>

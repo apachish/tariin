@@ -96,6 +96,6 @@ require_once(dirname(__FILE__).'/lib/helix.php');
 <?php
 }else{
     $app =& JFactory::getApplication();
-    $app->redirect('http://37.59.166.168');
+    $app->redirect('http://tariin.ir');
 }
     ?>

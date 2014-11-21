@@ -49,9 +49,9 @@ class JConfig {
 	public $offline_message = 'این سایت موقتا به دلیل تعمیرات در دسترس نیست.<br /> لطفا بعداً مراجعه فرمایید.';
 	public $offset = 'UTC';
 	public $offset_user = 'UTC';
-	public $password = 'root';
+	public $password = 'rtvilw6AVcs';
 	public $robots = '';
-	public $secret = 'QlfJ96XbzE2KJvgzDNigbod3SiUdcMkH';
+	public $secret = 'Zb3bpmaPu3HooaEZzSwHuD2Odo2CvEkb';
 	public $sef = '0';
 	public $sef_rewrite = '0';
 	public $sef_suffix = '0';
@@ -67,7 +67,7 @@ class JConfig {
 	public $smtpuser = '';
 	public $tmp_path = '/home/shahriar/test_site/conver/tmp';
 	public $unicodeslugs = '0';
-	public $user = 'root';
+	public $user = 'conver';
 	public $proxy_enable = '0';
 	public $proxy_host = '';
 	public $proxy_port = '';

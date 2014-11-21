@@ -3,14 +3,13 @@
  * @package     Joomla.Site
  * @subpackage  com_newsfeeds
  *
- * @copyright   Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.
+ * @copyright   Copyright (C) 2005 - 2013 Open Source Matters, Inc. All rights reserved.
  * @license     GNU General Public License version 2 or later; see LICENSE.txt
  */
 
 defined('_JEXEC') or die;
-JHtml::addIncludePath(JPATH_COMPONENT.'/helpers');
 
-JHtml::_('behavior.caption');
+$pageClass = $this->params->get('pageclass_sfx');
 ?>
 <div class="newsfeed-category<?php echo $this->pageclass_sfx;?>">
 <?php if ($this->params->get('show_page_heading')) : ?>
@@ -20,7 +19,7 @@ JHtml::_('behavior.caption');
 <?php endif; ?>
 <?php if ($this->params->get('show_category_title', 1)) : ?>
 <h2>
-	<?php echo JHtml::_('content.prepare', $this->category->title, '', 'com_newsfeeds.category.title'); ?>
+	<?php echo JHtml::_('content.prepare', $this->category->title, '', 'com_newsfeeds.category'); ?>
 </h2>
 <?php endif; ?>
 <?php if ($this->params->get('show_description', 1) || $this->params->def('show_description_image', 1)) : ?>

@@ -167,6 +167,7 @@ body {
     float: left;
     position: relative;
     padding-bottom: 20px;
+    overflow: hidden
 
 }
 
@@ -486,7 +487,6 @@ body {
 
 img {
     border: 0 none;
-    max-width: 100%;
 }
 
 /* hide the mobile menu button */
