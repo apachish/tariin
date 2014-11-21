@@ -96,6 +96,6 @@ require_once(dirname(__FILE__).'/lib/helix.php');
 <?php
 }else{
     $app =& JFactory::getApplication();
-    $app->redirect('http://tariin.ir');
+    $app->redirect( JURI::root());
 }
     ?>

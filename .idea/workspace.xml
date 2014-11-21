@@ -35,44 +35,56 @@
       <file leaf-file-name="default.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/com_conversation/views/messages/tmpl/default.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="338" column="15" selection-start="13611" selection-end="13611" vertical-scroll-proportion="0.0" vertical-offset="5070" max-vertical-offset="8880">
+            <state line="406" column="74" selection-start="15344" selection-end="15350" vertical-scroll-proportion="-3.5294118" vertical-offset="5910" max-vertical-offset="8880">
               <folding>
-                <marker date="1415436641162" expanded="false" signature="1377:1390" placeholder="..." />
-                <marker date="1415436641162" expanded="true" signature="15602:15623" placeholder="..." />
+                <element signature="e#6#275#0" expanded="true" />
+                <marker date="1416601484240" expanded="false" signature="1377:1390" placeholder="..." />
+                <marker date="1416601484240" expanded="true" signature="15546:15567" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="default.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/protostar/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="231" column="78" selection-start="8417" selection-end="8417" vertical-scroll-proportion="-19.0" vertical-offset="2919" max-vertical-offset="3510">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/shaper_financial_news/index.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="98" column="32" selection-start="3528" selection-end="3528" vertical-scroll-proportion="0.8306878" vertical-offset="834" max-vertical-offset="1440">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="default.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/components/com_adduserfrontend/views/adduserfrontend/tmpl/default.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="659" column="3" selection-start="24902" selection-end="24902" vertical-scroll-proportion="0.3899614" vertical-offset="9683" max-vertical-offset="12030">
+            <state line="516" column="2" selection-start="20343" selection-end="20343" vertical-scroll-proportion="-7.875" vertical-offset="7551" max-vertical-offset="12030">
               <folding>
-                <marker date="1416583457855" expanded="true" signature="1904:1932" placeholder="SELECT id FR..#__usergroups..." />
-                <marker date="1416583457855" expanded="true" signature="2618:2694" placeholder="SELECT paren..#__usergroups..." />
-                <marker date="1416583457855" expanded="true" signature="21826:22310" placeholder="..." />
-                <marker date="1416583457855" expanded="true" signature="21873:22002" placeholder="{...}" />
-                <marker date="1416583457855" expanded="true" signature="21891:22000" placeholder="{...}" />
-                <marker date="1416583457855" expanded="true" signature="21925:21963" placeholder="{...}" />
-                <marker date="1416583457855" expanded="true" signature="21974:21996" placeholder="{...}" />
-                <marker date="1416583457855" expanded="true" signature="22043:22257" placeholder="{...}" />
-                <marker date="1416583457855" expanded="true" signature="22184:22226" placeholder="{...}" />
-                <marker date="1416583457855" expanded="true" signature="22232:22255" placeholder="{...}" />
-                <marker date="1416583457855" expanded="true" signature="22291:22311" placeholder="{...}" />
-                <marker date="1416583457855" expanded="true" signature="24771:24843" placeholder="SELECT id,ti..#__usergroups..." />
-                <marker date="1416583457855" expanded="true" signature="26069:26158" placeholder="SELECT id,ti..#__usergroups..." />
-                <marker date="1416583457855" expanded="true" signature="26431:26524" placeholder="SELECT id,ti..#__usergroups..." />
-                <marker date="1416583457855" expanded="true" signature="26673:26746" placeholder="SELECT id,ti..#__usergroups..." />
-                <marker date="1416583457855" expanded="true" signature="27973:28062" placeholder="SELECT id,ti..#__usergroups..." />
-                <marker date="1416583457855" expanded="false" signature="28647:28657" placeholder="..." />
-                <marker date="1416583457855" expanded="true" signature="29176:29230" placeholder="..." />
-                <marker date="1416583457855" expanded="true" signature="29300:29353" placeholder="..." />
-                <marker date="1416583457855" expanded="true" signature="29447:29458" placeholder="..." />
-                <marker date="1416583457855" expanded="true" signature="29648:29698" placeholder="..." />
-                <marker date="1416583457855" expanded="true" signature="29799:29852" placeholder="..." />
-                <marker date="1416583457855" expanded="true" signature="29959:30012" placeholder="..." />
-                <marker date="1416583457855" expanded="true" signature="30091:30118" placeholder="..." />
+                <marker date="1416601396392" expanded="true" signature="1904:1932" placeholder="SELECT id FR..#__usergroups..." />
+                <marker date="1416601396392" expanded="true" signature="2618:2694" placeholder="SELECT paren..#__usergroups..." />
+                <marker date="1416601396392" expanded="true" signature="21823:22307" placeholder="..." />
+                <marker date="1416601396392" expanded="true" signature="21870:21999" placeholder="{...}" />
+                <marker date="1416601396392" expanded="true" signature="21888:21997" placeholder="{...}" />
+                <marker date="1416601396392" expanded="true" signature="21922:21960" placeholder="{...}" />
+                <marker date="1416601396392" expanded="true" signature="21971:21993" placeholder="{...}" />
+                <marker date="1416601396392" expanded="true" signature="22040:22254" placeholder="{...}" />
+                <marker date="1416601396392" expanded="true" signature="22181:22223" placeholder="{...}" />
+                <marker date="1416601396392" expanded="true" signature="22229:22252" placeholder="{...}" />
+                <marker date="1416601396392" expanded="true" signature="22288:22308" placeholder="{...}" />
+                <marker date="1416601396392" expanded="true" signature="24768:24840" placeholder="SELECT id,ti..#__usergroups..." />
+                <marker date="1416601396392" expanded="true" signature="26063:26152" placeholder="SELECT id,ti..#__usergroups..." />
+                <marker date="1416601396392" expanded="true" signature="26425:26518" placeholder="SELECT id,ti..#__usergroups..." />
+                <marker date="1416601396392" expanded="true" signature="26667:26740" placeholder="SELECT id,ti..#__usergroups..." />
+                <marker date="1416601396392" expanded="true" signature="27967:28056" placeholder="SELECT id,ti..#__usergroups..." />
+                <marker date="1416601396392" expanded="false" signature="28641:28651" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -123,15 +135,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="view.html.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/com_smsing/views/message/view.html.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="35" selection-start="608" selection-end="651" vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="1740">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -176,7 +179,6 @@
         <option value="$PROJECT_DIR$/plugins/system/helix/features/brand.php" />
         <option value="$PROJECT_DIR$/components/com_adduserfrontend/views/customer/tmpl/default.php" />
         <option value="$PROJECT_DIR$/components/com_adduserfrontend/views/customer/view.html.php" />
-        <option value="$PROJECT_DIR$/templates/shaper_financial_news/index.php" />
         <option value="$PROJECT_DIR$/components/com_conversation/assets/js/form.js" />
         <option value="$PROJECT_DIR$/components/com_adduserfrontend/views/adduserfrontend/view.html.php" />
         <option value="$PROJECT_DIR$/components/com_sms/models/message.php" />
@@ -186,13 +188,14 @@
         <option value="$PROJECT_DIR$/administrator/components/com_messages/models/message.php" />
         <option value="$PROJECT_DIR$/administrator/components/com_smsing/config.xml" />
         <option value="$PROJECT_DIR$/components/com_smsing/views/message/view.html.php" />
-        <option value="$PROJECT_DIR$/components/com_conversation/views/messages/tmpl/default.php" />
         <option value="$PROJECT_DIR$/administrator/language/fa-IR/fa-IR.com_smsing.ini" />
         <option value="$PROJECT_DIR$/administrator/components/com_smsing/views/messages/view.html.php" />
         <option value="$PROJECT_DIR$/administrator/components/com_smsing/views/messages/tmpl/default.php" />
         <option value="$PROJECT_DIR$/language/fa-IR/fa-IR.com_adduserfrontend.ini" />
         <option value="$PROJECT_DIR$/components/com_smsing/models/message.php" />
         <option value="$PROJECT_DIR$/components/com_adduserfrontend/views/adduserfrontend/tmpl/default.php" />
+        <option value="$PROJECT_DIR$/components/com_conversation/views/messages/tmpl/default.php" />
+        <option value="$PROJECT_DIR$/templates/shaper_financial_news/index.php" />
       </list>
     </option>
   </component>
@@ -228,6 +231,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -242,7 +246,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="conver" />
+              <option name="myItemId" value="tariin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -252,7 +256,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="conver" />
+              <option name="myItemId" value="tariin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -266,25 +270,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="conver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="shaper_financial_news" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="conver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="conver" />
+              <option name="myItemId" value="tariin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -295,8 +281,22 @@
               <option name="myItemId" value="shaper_financial_news" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="conver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tariin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="protostar" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -306,39 +306,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="conver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="language" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="conver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="conver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="language" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="fa-IR" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="conver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="conver" />
+              <option name="myItemId" value="tariin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -352,7 +320,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="conver" />
+              <option name="myItemId" value="tariin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -360,7 +328,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="com_smsing" />
+              <option name="myItemId" value="com_conversation" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -370,7 +338,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="conver" />
+              <option name="myItemId" value="tariin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -378,7 +346,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="com_smsing" />
+              <option name="myItemId" value="com_conversation" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -392,7 +360,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="conver" />
+              <option name="myItemId" value="tariin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -400,7 +368,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="com_smsing" />
+              <option name="myItemId" value="com_conversation" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -408,7 +376,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="message" />
+              <option name="myItemId" value="messages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -418,7 +386,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="conver" />
+              <option name="myItemId" value="tariin" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -426,109 +394,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="com_smsing" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="conver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="conver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com_smsing" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="conver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="conver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com_mailto" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="conver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="conver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com_adduserfrontend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="conver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="conver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com_adduserfrontend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="conver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="conver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com_adduserfrontend" />
+              <option name="myItemId" value="com_conversation" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -536,33 +402,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="adduserfrontend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="conver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="conver" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="components" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com_adduserfrontend" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="views" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="adduserfrontend" />
+              <option name="myItemId" value="messages" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -572,13 +412,12 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FullScreen" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/tariin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="recentsLimit" value="5" />
   </component>
   <component name="RunManager" selected="PHP Script.default.php">
@@ -640,6 +479,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44563553" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2510981" sideWeight="0.4992343" order="0" side_tool="false" content_ui="combo" />
@@ -651,7 +491,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44563553" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -676,6 +515,13 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/components/com_smsing/views/message/view.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="35" selection-start="608" selection-end="651" vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="1740">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/modules/mod_menu/helper.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="126" column="57" selection-start="3554" selection-end="3641" vertical-scroll-proportion="4.8913045" vertical-offset="450" max-vertical-offset="2895" />
@@ -761,11 +607,6 @@
         <state line="47" column="0" selection-start="1393" selection-end="1393" vertical-scroll-proportion="-20.625" vertical-offset="0" max-vertical-offset="615" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/protostar/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="231" column="78" selection-start="8417" selection-end="8417" vertical-scroll-proportion="0.56299216" vertical-offset="3232" max-vertical-offset="3510" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/atomic/css/blueprint/plugins/silksprite/sprite.css">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="40069" selection-start="40069" selection-end="40069" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="278" />
@@ -814,16 +655,6 @@
     <entry file="file://$PROJECT_DIR$/components/com_conversation/assets/js/form.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="19" column="0" selection-start="629" selection-end="629" vertical-scroll-proportion="0.4718543" vertical-offset="0" max-vertical-offset="604" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/administrator/components/com_akeeba/backup/convrtion/modules/mod_bm_slide_login/assets/css/styles.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="17" selection-start="2327" selection-end="2327" vertical-scroll-proportion="-11.624366" vertical-offset="7965" max-vertical-offset="16020" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/shaper_financial_news/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="6" selection-start="3548" selection-end="3548" vertical-scroll-proportion="0.84719867" vertical-offset="836" max-vertical-offset="1425" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/components/com_adduserfrontend/views/customer/view.html.php">
@@ -907,16 +738,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/components/com_conversation/views/messages/tmpl/default.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="338" column="15" selection-start="13611" selection-end="13611" vertical-scroll-proportion="0.0" vertical-offset="5070" max-vertical-offset="8880">
-          <folding>
-            <marker date="1415436641162" expanded="false" signature="1377:1390" placeholder="..." />
-            <marker date="1415436641162" expanded="true" signature="15602:15623" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/language/fa-IR/fa-IR.com_adduserfrontend.ini">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="33" selection-start="1634" selection-end="1634" vertical-scroll-proportion="0.0" vertical-offset="71" max-vertical-offset="690">
@@ -947,33 +768,51 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/components/com_adduserfrontend/views/adduserfrontend/tmpl/default.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="659" column="3" selection-start="24902" selection-end="24902" vertical-scroll-proportion="0.3899614" vertical-offset="9683" max-vertical-offset="12030">
+        <state line="516" column="2" selection-start="20343" selection-end="20343" vertical-scroll-proportion="-7.875" vertical-offset="7551" max-vertical-offset="12030">
           <folding>
-            <marker date="1416583457855" expanded="true" signature="1904:1932" placeholder="SELECT id FR..#__usergroups..." />
-            <marker date="1416583457855" expanded="true" signature="2618:2694" placeholder="SELECT paren..#__usergroups..." />
-            <marker date="1416583457855" expanded="true" signature="21826:22310" placeholder="..." />
-            <marker date="1416583457855" expanded="true" signature="21873:22002" placeholder="{...}" />
-            <marker date="1416583457855" expanded="true" signature="21891:22000" placeholder="{...}" />
-            <marker date="1416583457855" expanded="true" signature="21925:21963" placeholder="{...}" />
-            <marker date="1416583457855" expanded="true" signature="21974:21996" placeholder="{...}" />
-            <marker date="1416583457855" expanded="true" signature="22043:22257" placeholder="{...}" />
-            <marker date="1416583457855" expanded="true" signature="22184:22226" placeholder="{...}" />
-            <marker date="1416583457855" expanded="true" signature="22232:22255" placeholder="{...}" />
-            <marker date="1416583457855" expanded="true" signature="22291:22311" placeholder="{...}" />
-            <marker date="1416583457855" expanded="true" signature="24771:24843" placeholder="SELECT id,ti..#__usergroups..." />
-            <marker date="1416583457855" expanded="true" signature="26069:26158" placeholder="SELECT id,ti..#__usergroups..." />
-            <marker date="1416583457855" expanded="true" signature="26431:26524" placeholder="SELECT id,ti..#__usergroups..." />
-            <marker date="1416583457855" expanded="true" signature="26673:26746" placeholder="SELECT id,ti..#__usergroups..." />
-            <marker date="1416583457855" expanded="true" signature="27973:28062" placeholder="SELECT id,ti..#__usergroups..." />
-            <marker date="1416583457855" expanded="false" signature="28647:28657" placeholder="..." />
-            <marker date="1416583457855" expanded="true" signature="29176:29230" placeholder="..." />
-            <marker date="1416583457855" expanded="true" signature="29300:29353" placeholder="..." />
-            <marker date="1416583457855" expanded="true" signature="29447:29458" placeholder="..." />
-            <marker date="1416583457855" expanded="true" signature="29648:29698" placeholder="..." />
-            <marker date="1416583457855" expanded="true" signature="29799:29852" placeholder="..." />
-            <marker date="1416583457855" expanded="true" signature="29959:30012" placeholder="..." />
-            <marker date="1416583457855" expanded="true" signature="30091:30118" placeholder="..." />
+            <marker date="1416601396392" expanded="true" signature="1904:1932" placeholder="SELECT id FR..#__usergroups..." />
+            <marker date="1416601396392" expanded="true" signature="2618:2694" placeholder="SELECT paren..#__usergroups..." />
+            <marker date="1416601396392" expanded="true" signature="21823:22307" placeholder="..." />
+            <marker date="1416601396392" expanded="true" signature="21870:21999" placeholder="{...}" />
+            <marker date="1416601396392" expanded="true" signature="21888:21997" placeholder="{...}" />
+            <marker date="1416601396392" expanded="true" signature="21922:21960" placeholder="{...}" />
+            <marker date="1416601396392" expanded="true" signature="21971:21993" placeholder="{...}" />
+            <marker date="1416601396392" expanded="true" signature="22040:22254" placeholder="{...}" />
+            <marker date="1416601396392" expanded="true" signature="22181:22223" placeholder="{...}" />
+            <marker date="1416601396392" expanded="true" signature="22229:22252" placeholder="{...}" />
+            <marker date="1416601396392" expanded="true" signature="22288:22308" placeholder="{...}" />
+            <marker date="1416601396392" expanded="true" signature="24768:24840" placeholder="SELECT id,ti..#__usergroups..." />
+            <marker date="1416601396392" expanded="true" signature="26063:26152" placeholder="SELECT id,ti..#__usergroups..." />
+            <marker date="1416601396392" expanded="true" signature="26425:26518" placeholder="SELECT id,ti..#__usergroups..." />
+            <marker date="1416601396392" expanded="true" signature="26667:26740" placeholder="SELECT id,ti..#__usergroups..." />
+            <marker date="1416601396392" expanded="true" signature="27967:28056" placeholder="SELECT id,ti..#__usergroups..." />
+            <marker date="1416601396392" expanded="false" signature="28641:28651" placeholder="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/com_conversation/views/messages/tmpl/default.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="406" column="74" selection-start="15344" selection-end="15350" vertical-scroll-proportion="-3.5294118" vertical-offset="5910" max-vertical-offset="8880">
+          <folding>
+            <element signature="e#6#275#0" expanded="true" />
+            <marker date="1416601484240" expanded="false" signature="1377:1390" placeholder="..." />
+            <marker date="1416601484240" expanded="true" signature="15546:15567" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/protostar/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="231" column="78" selection-start="8417" selection-end="8417" vertical-scroll-proportion="-19.0" vertical-offset="2919" max-vertical-offset="3510">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/shaper_financial_news/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="98" column="32" selection-start="3528" selection-end="3528" vertical-scroll-proportion="0.8306878" vertical-offset="834" max-vertical-offset="1440">
+          <folding />
         </state>
       </provider>
     </entry>

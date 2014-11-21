@@ -514,7 +514,7 @@ $body   = "".JText::_("YOUHAVEBEENADDED")." http://".$_SERVER['HTTP_HOST']."<br>
 ";
 // Send notification email now!
 mail($recipient, $subject, $body, $headers);
-  sms // http://site/conver/index.php?option=com_smsing&view=message&telephon=9372852427&text=salam
+   // http://site/conver/index.php?option=com_smsing&view=message&telephon=9372852427&text=salam
 } 
 // Send notification email to admin
 if($adminnotificationemail == "1"){

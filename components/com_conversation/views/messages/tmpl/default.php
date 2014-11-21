@@ -111,7 +111,7 @@ $user = JFactory::getUser();
             if(last){
                 opt='<li class="message-single">';
                 opt+='<div class="avatar-container">';
-                opt+='<img src="/conver/components/com_conversation/assets/img/avatars/1.jpg">';
+                opt+='<img src="/components/com_conversation/assets/img/avatars/1.jpg">';
                 opt+='</div>';
                 opt+='<div class="message-container">';
                 opt+='<div class="message-text">';
@@ -136,7 +136,7 @@ $user = JFactory::getUser();
                 opt+=' last_ul'+groups+'">';
                 opt+='<li class="message-single message-first">';
                 opt+='<div class="avatar-container">';
-                opt+='<img src="/conver/components/com_conversation/assets/img/avatars/1.jpg">';
+                opt+='<img src="/components/com_conversation/assets/img/avatars/1.jpg">';
                 opt+='</div>';
                 opt+='<div class="message-container">';
                 opt+='<div class="message-text">';
@@ -366,25 +366,25 @@ $user = JFactory::getUser();
         display: inline;
     }
     .like{
-        background: url('/conver/components/com_conversation/assets/img/like.png');
+        background: url('/components/com_conversation/assets/img/like.png');
         width: 20px;
         height: 20px;
         display: inline-block;
     }
     .liked{
-        background: url('/conver/components/com_conversation/assets/img/liked.png');
+        background: url('/components/com_conversation/assets/img/liked.png');
         width: 20px;
         height: 20px;
         display: inline-block;
     }
     .unlike{
-        background: url('/conver/components/com_conversation/assets/img/unlike.png');
+        background: url('/components/com_conversation/assets/img/unlike.png');
         width: 20px;
         height: 20px;
         display: inline-block;
     }
     .unliked{
-        background: url('/conver/components/com_conversation/assets/img/unliked.png');
+        background: url('/components/com_conversation/assets/img/unliked.png');
         width: 20px;
         height: 20px;
         display: inline-block;
@@ -404,8 +404,8 @@ $user = JFactory::getUser();
     }
 </style>
 
-<link rel="shortcut icon" type="image/x-icon" href="/conver/components/com_conversation/assets/img/favicon.ico">
-<link rel="stylesheet" href="/conver/components/com_conversation/assets/css/styles.css">
+<link rel="shortcut icon" type="image/x-icon" href="/components/com_conversation/assets/img/favicon.ico">
+<link rel="stylesheet" href="/components/com_conversation/assets/css/styles.css">
 
 <?php
 $groupsize=sizeof($user->groups);
@@ -460,7 +460,7 @@ foreach($user->groups as $grops){
                         <?php }?>
                         <li class="message-single <?php if(!$i){?>message-first<?php }?>">
                             <div class="avatar-container">
-                                <img src="/conver/components/com_conversation/assets/img/avatars/1.jpg">
+                                <img src="/components/com_conversation/assets/img/avatars/1.jpg">
                             </div>
                             <div class="message-container">
                                 <div class="message-text" >
@@ -504,7 +504,7 @@ foreach($user->groups as $grops){
                                 <?php }?>
                                 <li class="message-single <?php if(!$i){?>message-first<?php }?>">
                                     <div class="avatar-container">
-                                        <img src="/conver/components/com_conversation/assets/img/avatars/1.jpg">
+                                        <img src="/components/com_conversation/assets/img/avatars/1.jpg">
                                     </div>
                                     <div class="message-container">
                                         <div class="message-text" >
