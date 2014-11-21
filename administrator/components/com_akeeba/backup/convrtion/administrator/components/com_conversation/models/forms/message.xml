@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+	<fieldset>
+
+              <field name="id" type="text" default="0" label="COM_CONVERSATION_FORM_LBL_MESSAGE_ID"
+            readonly="true" class="readonly"
+            description="JGLOBAL_FIELD_ID_DESC" /> 
+
+       <field name="created_by" type="createdby" default="" 
+            label="COM_CONVERSATION_FORM_LBL_MESSAGE_CREATED_BY"
+            description="COM_CONVERSATION_FORM_DESC_MESSAGE_CREATED_BY"  /> 
+
+       <field name="message" type="editor"
+                
+            label="COM_CONVERSATION_FORM_LBL_MESSAGE_MESSAGE"
+            description="COM_CONVERSATION_FORM_DESC_MESSAGE_MESSAGE" 
+                
+                
+                 required="true" 
+            menu_published="0"
+            filter="string" /> 
+
+       <field name="father" type="text"
+                
+            label="COM_CONVERSATION_FORM_LBL_MESSAGE_FATHER"
+            description="COM_CONVERSATION_FORM_DESC_MESSAGE_FATHER" 
+                
+                
+                
+            readonly="true"
+            disabled="1" /> 
+
+       <field name="team" type="text"
+                
+            label="COM_CONVERSATION_FORM_LBL_MESSAGE_TEAM"
+            description="COM_CONVERSATION_FORM_DESC_MESSAGE_TEAM" 
+                
+                
+                 required="true" 
+            readonly="true"
+            disabled="1" /> 
+
+       <field name="opposition" type="checkbox"
+                
+            label="COM_CONVERSATION_FORM_LBL_MESSAGE_OPPOSITION"
+            description="COM_CONVERSATION_FORM_DESC_MESSAGE_OPPOSITION" 
+                
+                
+                 /> 
+
+       <field name="agree" type="checkbox"
+                
+            label="COM_CONVERSATION_FORM_LBL_MESSAGE_AGREE"
+            description="COM_CONVERSATION_FORM_DESC_MESSAGE_AGREE" 
+                
+                
+                 /> 
+
+       <field name="create_time" type="calendar"
+                
+            label="COM_CONVERSATION_FORM_LBL_MESSAGE_CREATE_TIME"
+            description="COM_CONVERSATION_FORM_DESC_MESSAGE_CREATE_TIME" 
+                
+                
+                 required="true" 
+            readonly="true"
+            disabled="1" /> 
+
+       <field name="sender" type="text"
+                
+            label="COM_CONVERSATION_FORM_LBL_MESSAGE_SENDER"
+            description="COM_CONVERSATION_FORM_DESC_MESSAGE_SENDER" 
+                
+                
+                 required="true" 
+            readonly="true"
+            disabled="1" /> 
+
+         <field
+        name="state"
+        type="list"
+        label="JSTATUS"
+        description="JFIELD_PUBLISHED_DESC"
+        class="inputbox"
+        size="1"
+        default="1">
+        <option value="1">JPUBLISHED</option>
+        <option value="0">JUNPUBLISHED</option>
+        <option value="2">JARCHIVED</option>
+        <option value="-2">JTRASHED</option>
+    </field> 
+
+                        <field name="checked_out" type="hidden" filter="unset" />
+        <field name="checked_out_time" type="hidden" filter="unset" /> 
+
+ </fieldset> 
+
+ <fieldset 
+                        name="accesscontrol">
+                       <field name="asset_id" type="hidden" filter="unset" />
+                       <field name="rules"
+                            type="rules"
+                            label="JFIELD_RULES_LABEL"
+                            translate_label="false"
+                            filter="rules"
+                            validate="rules"
+                            class="inputbox"
+                            component="com_conversation"
+                            section="message"
+                        />
+
+	</fieldset>
+
+</form>

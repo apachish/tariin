@@ -1,0 +1,196 @@
+<?php
+/**
+ * @version     1.0.0
+ * @package     com_conversation
+ * @copyright   Copyright (C) 2014. All rights reserved.
+ * @license     GNU General Public License version 2 or later; see LICENSE.txt
+ * @author      shahriar <apachish@gmail.com> - http://www.bmsystem.ir
+ */
+// no direct access
+defined('_JEXEC') or die;
+
+JHtml::addIncludePath(JPATH_COMPONENT . '/helpers/html');
+JHtml::_('bootstrap.tooltip');
+JHtml::_('behavior.multiselect');
+JHtml::_('formbehavior.chosen', 'select');
+?>
+<html lang="en-US">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Chat</title>
+		<meta name="description" content=""/>
+		<meta name="keywords" content=""/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">			
+		<link rel="stylesheet" href="css/styles.css">
+	</head>
+	<body>
+		<div class="messages-wrapper">
+			<ul class="messages-list">
+				<li class="messege-row">
+					<ul class="message-list sent-message">
+						<li class="message-single message-first">
+							<div class="avatar-container">
+								<img src="img/avatars/1.jpg">
+							</div>
+							<div class="message-container">
+								<div class="message-text">
+									This is a Message this is a message this is a message this is a message this is a message this is a message this is a message this is a message this is a message 
+								</div>
+							</div>
+						</li>
+						<li class="message-single">
+							<div class="avatar-container">
+								<img src="img/avatars/1.jpg">
+							</div>
+							<div class="message-container">
+								<div class="message-text">
+									This is a Message
+								</div>
+							</div>
+						</li>
+						<li class="message-single">
+							<div class="avatar-container">
+								<img src="img/avatars/1.jpg">
+							</div>
+							<div class="message-container">
+								<div class="message-text">
+									This is a Message this is a message this is a message this is a message
+								</div>
+							</div>
+						</li>
+						<li class="message-single">
+							<div class="avatar-container">
+								<img src="img/avatars/1.jpg">
+							</div>
+							<div class="message-container">
+								<div class="message-text">
+									This is a Message
+								</div>
+							</div>
+						</li>
+					</ul>
+				</li>
+				<li class="messege-row">
+					<ul class="message-list received-message">
+						<li class="message-single message-first">
+							<div class="avatar-container">
+								<img src="img/avatars/2.jpg">
+							</div>
+							<div class="message-container">
+								<div class="message-text">
+									This is a Message
+								</div>
+							</div>
+						</li>
+						<li class="message-single">
+							<div class="avatar-container">
+								<img src="img/avatars/2.jpg">
+							</div>
+							<div class="message-container">
+								<div class="message-text">
+									This is a Message this is a message this is a message
+								</div>
+							</div>
+						</li>
+						<li class="message-single">
+							<div class="avatar-container">
+								<img src="img/avatars/2.jpg">
+							</div>
+							<div class="message-container">
+								<div class="message-text">
+									This is a Message this is a message this is a message this is a message this is a message this is a message this is a message this is a message this is a message this is a message this is a message this is a message this is a message
+								</div>
+							</div>
+						</li>
+						<li class="message-single">
+							<div class="avatar-container">
+								<img src="img/avatars/2.jpg">
+							</div>
+							<div class="message-container">
+								<div class="message-text">
+									This is a Message
+								</div>
+							</div>
+						</li>
+					</ul>
+				</li>
+				<li class="messege-row">
+					<ul class="message-list sent-message">
+						<li class="message-single message-first">
+							<div class="avatar-container">
+								<img src="img/avatars/1.jpg">
+							</div>
+							<div class="message-container">
+								<div class="message-text">
+									This is a Message
+								</div>
+							</div>
+						</li>
+					</ul>
+				</li>
+				<li class="messege-row">
+					<ul class="message-list received-message">
+						<li class="message-single message-first">
+							<div class="avatar-container">
+								<img src="img/avatars/2.jpg">
+							</div>
+							<div class="message-container">
+								<div class="message-text">
+									This is a Message
+								</div>
+							</div>
+						</li>
+						<li class="message-single">
+							<div class="avatar-container">
+								<img src="img/avatars/2.jpg">
+							</div>
+							<div class="message-container">
+								<div class="message-text">
+									This is a Message this is a message this is a message
+								</div>
+							</div>
+						</li>
+						<li class="message-single">
+							<div class="avatar-container">
+								<img src="img/avatars/2.jpg">
+							</div>
+							<div class="message-container">
+								<div class="message-text">
+									This is a Message this is a message
+								</div>
+							</div>
+						</li>
+					</ul>
+				</li>
+				<li class="messege-row">
+					<ul class="message-list sent-message">
+						<li class="message-single  message-first">
+							<div class="avatar-container">
+								<img src="img/avatars/1.jpg">
+							</div>
+							<div class="message-container">
+								<div class="message-text">
+									This is a Message this is a message this is a message this is a message this is a message this is a message this is a message this is a message
+								</div>
+							</div>
+						</li>
+						<li class="message-single">
+							<div class="avatar-container">
+								<img src="img/avatars/1.jpg">
+							</div>
+							<div class="message-container">
+								<div class="message-text">
+									This is a Message
+								</div>
+							</div>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<div class="input-wrapper">
+		</div>
+	</body>
+</html>
