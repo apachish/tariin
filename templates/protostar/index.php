@@ -89,7 +89,16 @@ else
 	if ($this->params->get('googleFont'))
 	{
 	?>
+        <?php if (strpos($source, 'http') === 0) {?>
 		<link href='http://fonts.googleapis.com/css?family=<?php echo $this->params->get('googleFontName');?>' rel='stylesheet' type='text/css' />
+            <?php }
+
+        ?>
+        <?php if (strpos($source, 'https') === 0) {?>
+        <link href='https://fonts.googleapis.com/css?family=<?php echo $this->params->get('googleFontName');?>' rel='stylesheet' type='text/css' />
+    <?php }
+
+        ?>
 		<style type="text/css">
 			h1,h2,h3,h4,h5,h6,.site-title{
 				font-family: '<?php echo str_replace('+', ' ', $this->params->get('googleFontName'));?>', sans-serif;
@@ -131,10 +140,16 @@ else
 	<!--[if lt IE 9]>
 		<script src="<?php echo $this->baseurl ?>/media/jui/js/html5.js"></script>
 	<![endif]-->
+    <?php if (strpos($source, 'http') === 0) {?>
     <link href="http://code.jquery.com/ui/1.9.0/themes/ui-darkness/jquery-ui.css" rel="stylesheet">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.js"></script>
     <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.min.js"></script>
-
+    <?php }?>
+    <?php if (strpos($source, 'https') === 0) {?>
+        <link href="https://code.jquery.com/ui/1.9.0/themes/ui-darkness/jquery-ui.css" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.js"></script>
+        <script src="https://code.jquery.com/ui/1.9.0/jquery-ui.min.js"></script>
+    <?php }?>
     <!-- keyboard widget css & script (required) -->
     <link href="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/css/keyboard.css" rel="stylesheet">
     <script src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/js/jquery.keyboard.js"></script>

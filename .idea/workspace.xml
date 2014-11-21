@@ -45,19 +45,29 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/protostar/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="231" column="78" selection-start="8417" selection-end="8417" vertical-scroll-proportion="-19.0" vertical-offset="2919" max-vertical-offset="3510">
-              <folding />
+            <state line="164" column="17" selection-start="6014" selection-end="6014" vertical-scroll-proportion="0.33333334" vertical-offset="2278" max-vertical-offset="3735">
+              <folding>
+                <element signature="n#style#0;n#jdoc:include#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#jdoc:include#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#jdoc:include#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#jdoc:include#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#jdoc:include#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#jdoc:include#3;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#jdoc:include#0;n#div#2;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#jdoc:include#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#jdoc:include#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.php" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/shaper_financial_news/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="98" column="32" selection-start="3528" selection-end="3528" vertical-scroll-proportion="0.8306878" vertical-offset="834" max-vertical-offset="1440">
+            <state line="98" column="32" selection-start="3528" selection-end="3528" vertical-scroll-proportion="-19.625" vertical-offset="834" max-vertical-offset="1440">
               <folding />
             </state>
           </provider>
@@ -171,7 +181,6 @@
         <option value="$PROJECT_DIR$/components/com_adduserfrontend/models/customer.php" />
         <option value="$PROJECT_DIR$/components/com_conversation/models/message.php" />
         <option value="$PROJECT_DIR$/components/com_conversation/controller.php" />
-        <option value="$PROJECT_DIR$/templates/protostar/index.php" />
         <option value="$PROJECT_DIR$/language/fa-IR/fa-IR.com_conversation.ini" />
         <option value="$PROJECT_DIR$/templates/shaper_financial_news/error.php" />
         <option value="$PROJECT_DIR$/templates/shaper_financial_news/css/media_queries.css" />
@@ -196,6 +205,7 @@
         <option value="$PROJECT_DIR$/components/com_adduserfrontend/views/adduserfrontend/tmpl/default.php" />
         <option value="$PROJECT_DIR$/components/com_conversation/views/messages/tmpl/default.php" />
         <option value="$PROJECT_DIR$/templates/shaper_financial_news/index.php" />
+        <option value="$PROJECT_DIR$/templates/protostar/index.php" />
       </list>
     </option>
   </component>
@@ -474,15 +484,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="21" width="1366" height="747" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44563553" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.44563553" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2510981" sideWeight="0.4992343" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2510981" sideWeight="0.4992343" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24963397" sideWeight="0.5007657" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -802,17 +812,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/protostar/index.php">
+    <entry file="file://$PROJECT_DIR$/templates/shaper_financial_news/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="231" column="78" selection-start="8417" selection-end="8417" vertical-scroll-proportion="-19.0" vertical-offset="2919" max-vertical-offset="3510">
+        <state line="98" column="32" selection-start="3528" selection-end="3528" vertical-scroll-proportion="-19.625" vertical-offset="834" max-vertical-offset="1440">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/shaper_financial_news/index.php">
+    <entry file="file://$PROJECT_DIR$/templates/protostar/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="98" column="32" selection-start="3528" selection-end="3528" vertical-scroll-proportion="0.8306878" vertical-offset="834" max-vertical-offset="1440">
-          <folding />
+        <state line="164" column="17" selection-start="6014" selection-end="6014" vertical-scroll-proportion="0.33333334" vertical-offset="2278" max-vertical-offset="3735">
+          <folding>
+            <element signature="n#style#0;n#jdoc:include#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#jdoc:include#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#jdoc:include#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#jdoc:include#0;n#div#0;n#div#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#jdoc:include#0;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#jdoc:include#3;n#div#1;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#jdoc:include#0;n#div#2;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#jdoc:include#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#jdoc:include#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
