@@ -149,7 +149,11 @@ $doc->addStyleDeclaration($style);
         <td data-th="<?php echo JText::_('LIST_ROW')?>"><span><?php echo $i;?></span></td>
         <td data-th="<?php echo JText::_('LIST_NAME')?>"><span><?php echo $customer->name;?></span></td>
         <td data-th="<?php echo JText::_('LIST_TELEPHON')?>"><span><?php echo str_replace('"','',$this->gettelephon($customer->id));?></span></td>
-        <td data-th="<?php echo JText::_('LIST_EDIT')?>"><span><input type="radio" name="edit"></span></td>
+        <td data-th="<?php echo JText::_('LIST_EDIT')?>"><span>
+                <a href="index.php?option=com_adduserfrontend&view=adduserfrontend&type=edit&telephon=<?php echo str_replace('"','',$this->gettelephon($customer->id));?>">
+                <input type="radio" class="edit" value="<?php echo $customer->name;?>" name="edit">
+                </a>
+            </span></td>
     </tr>
     <?php $i++;}?>
 </table>
@@ -176,6 +180,7 @@ $doc->addStyleDeclaration($style);
             }
         });
     });
+
     // var ret = jQuery.parseJSON(data);
     //                        var opt;
     //                        //console.log(ret[0].Name);// alert(ret.state); alert(data);

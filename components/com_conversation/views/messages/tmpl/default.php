@@ -28,7 +28,7 @@ $user = JFactory::getUser();
 <script>
     jQuery(function() {
         //create a new WebSocket object.
-        var wsUri = "ws://localhost:9000/demo/server.php";
+        var wsUri = "ws://37.59.166.168:9000/server.php";
         var opt;
         websocket = new WebSocket(wsUri);
 
@@ -122,7 +122,7 @@ $user = JFactory::getUser();
                 opt+=message;
                 opt+='</p></div>';
                 opt+='</div>';
-                opt+='</li><p class="time"><div class="liked" id="like_'+id+'" title="<?php echo JText::_('TITLE_LIKE');?>" ></div><span id="num'+id+'"  class="likenumber">0</span>  <div class="unliked" id="unlike_'+id+'" title="<?php echo JText::_('TITLE_UNLIKE');?>"></div>';
+                opt+='</li><p class="time"><div class="like" id="like_'+id+'" title="<?php echo JText::_('TITLE_LIKE');?>" ></div><span id="num'+id+'"  class="likenumber">0</span>  <div class="unlike" id="unlike_'+id+'" title="<?php echo JText::_('TITLE_UNLIKE');?>"></div>';
                 opt+='<span id="numunlike'+id+'"  class="unlikenumber">0</span>  <span>.:'+id+':.</span></p>';
                             jQuery('.last_ul'+groups).append(opt);
             }else{
@@ -147,7 +147,7 @@ $user = JFactory::getUser();
                 opt+=message;
                 opt+='</p></div>';
                 opt+='</div>';
-                opt+='</li><p class="time"><div class="liked" title="<?php echo JText::_('TITLE_LIKE');?>" id="like_'+id+'" ></div><span id="num'+id+'"  class="likenumber">0</span>  <div class="unliked" title="<?php echo JText::_('TITLE_UNLIKE');?>" id="unlike_'+id+'" ></div>';
+                opt+='</li><p class="time"><div class="like" title="<?php echo JText::_('TITLE_LIKE');?>" id="like_'+id+'" ></div><span id="num'+id+'"  class="likenumber">0</span>  <div class="unlike" title="<?php echo JText::_('TITLE_UNLIKE');?>" id="unlike_'+id+'" ></div>';
                 opt+='<span id="numunlike'+id+'"  class="unlikenumber">0</span>  <span>.:'+id+':.</span></p></ul></li>';
 
                 jQuery('.group'+groups).append(opt);

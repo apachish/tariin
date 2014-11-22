@@ -10,8 +10,8 @@
  *
  * Add users to Community builder on the frontend
  *
-* @Copyright Copyright (C) 2009 - 2014 - Kim Pittoors - www.joomlacy.com
-* @license GNU/GPL http://www.gnu.org/copyleft/gpl.html
+ * @Copyright Copyright (C) 2009 - 2014 - Kim Pittoors - www.joomlacy.com
+ * @license GNU/GPL http://www.gnu.org/copyleft/gpl.html
  *
  */
 // no direct access
@@ -21,8 +21,9 @@ jimport( 'joomla.application.component.view');
  * HTML View class for the Add user Frontend component
  */
 class AdduserfrontendViewAdduserfrontend extends JViewLegacy {
-	function display($tpl = null) {
-exit
+    function display($tpl = null) {
+        $this->telephon = JRequest::getVar('telephon');
+        $this->type = JRequest::getVar('type');
         parent::display($tpl);
     }
 }

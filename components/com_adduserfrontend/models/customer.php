@@ -35,13 +35,42 @@ class AdduserfrontendModelCustomer extends JModelLegacy {
     function getcustomer(){
         $db = JFactory::getDBO();
         $user = JFactory::getUser();
-        $group=implode(',',$user->groups);
+        $per=$this->permistionlevel();
+        $group=implode(',',$per);
         $query_group="SELECT * FROM #__users where id IN(select user_id from #__user_usergroup_map where group_id IN (".$group."))";
         $db->setQuery($query_group);
         $list=$db->loadObjectlist();
         return $list;
     }
+    function permistionlevel(){
+        $db =& JFactory::getDBO();
+        $user = JFactory::getUser();
 
+        $query_group="SELECT * FROM #__usergroups where parent_id = 2 and id IN (select group_id from #__user_usergroup_map where user_id=".$user->id.")";
+        $db->setQuery($query_group);
+        $group=$db->loadObjectlist();
+        if($group){
+            $query_group="SELECT id FROM #__usergroups ";
+            $query_group.=" where ";
+            $size=sizeof($group);
+            $i=1;
+            foreach($group as $gr){
+                if($i<$size)
+                    $query_group.= "parent_id =".$gr->id." OR ";
+                else
+                    $query_group.= "parent_id =".$gr->id."  ";
+                $i++;
+            }
+            $query_group.="and id IN (select group_id from #__user_usergroup_map where user_id=".$user->id.")";
+        }
+        $db->setQuery($query_group);
+        $group_list=$db->loadAssocList();
+        $i=0;
+        foreach($group_list as $list){
+            $gr_list[$i++]=$list['id'];
+        }
+        return $gr_list;
+    }
 
 }
 ?>
