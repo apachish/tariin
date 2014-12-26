@@ -1,0 +1,811 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="73d7de3f-1b9a-4d78-9173-31224de6f25a" name="Default" comment="" />
+    <ignored path="conver.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="conver" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="default.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/components/com_adduserfrontend/views/customer/tmpl/default.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="153" column="105" selection-start="4100" selection-end="4140" vertical-scroll-proportion="-15.791667" vertical-offset="1916" max-vertical-offset="3090">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="default.php" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/components/com_adduserfrontend/views/adduserfrontend/tmpl/default.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="821" column="32" selection-start="38157" selection-end="38157" vertical-scroll-proportion="0.5811808" vertical-offset="12000" max-vertical-offset="13575">
+              <folding>
+                <marker date="1416691449480" expanded="true" signature="1894:1922" placeholder="SELECT id FR..#__usergroups..." />
+                <marker date="1416691449480" expanded="true" signature="2607:2683" placeholder="SELECT paren..#__usergroups..." />
+                <marker date="1416691449480" expanded="true" signature="7254:7303" placeholder="select * fro..#__user_usergroup_map..." />
+                <marker date="1416691449480" expanded="true" signature="31008:31489" placeholder="..." />
+                <marker date="1416691449480" expanded="true" signature="31053:31181" placeholder="{...}" />
+                <marker date="1416691449480" expanded="true" signature="31070:31179" placeholder="{...}" />
+                <marker date="1416691449480" expanded="true" signature="31104:31142" placeholder="{...}" />
+                <marker date="1416691449480" expanded="true" signature="31153:31175" placeholder="{...}" />
+                <marker date="1416691449480" expanded="true" signature="31222:31436" placeholder="{...}" />
+                <marker date="1416691449480" expanded="true" signature="31363:31405" placeholder="{...}" />
+                <marker date="1416691449480" expanded="true" signature="31411:31434" placeholder="{...}" />
+                <marker date="1416691449480" expanded="true" signature="31470:31490" placeholder="{...}" />
+                <marker date="1416691449480" expanded="true" signature="33927:33999" placeholder="SELECT id,ti..#__usergroups..." />
+                <marker date="1416691449480" expanded="true" signature="35220:35309" placeholder="SELECT id,ti..#__usergroups..." />
+                <marker date="1416691449480" expanded="true" signature="35582:35675" placeholder="SELECT id,ti..#__usergroups..." />
+                <marker date="1416691449480" expanded="true" signature="35823:35896" placeholder="SELECT id,ti..#__usergroups..." />
+                <marker date="1416691449480" expanded="true" signature="37120:37209" placeholder="SELECT id,ti..#__usergroups..." />
+                <marker date="1416691449480" expanded="true" signature="38213:38223" placeholder="..." />
+                <marker date="1416691449480" expanded="true" signature="38332:38361" placeholder="..." />
+                <marker date="1416691449480" expanded="true" signature="38913:38967" placeholder="..." />
+                <marker date="1416691449480" expanded="true" signature="39037:39090" placeholder="..." />
+                <marker date="1416691449480" expanded="true" signature="39184:39195" placeholder="..." />
+                <marker date="1416691449480" expanded="true" signature="39484:39534" placeholder="..." />
+                <marker date="1416691449480" expanded="true" signature="39635:39689" placeholder="..." />
+                <marker date="1416691449480" expanded="true" signature="39796:39849" placeholder="..." />
+                <marker date="1416691449480" expanded="true" signature="39928:40006" placeholder="..." />
+                <marker date="1416691449480" expanded="true" signature="39928:39960" placeholder="..." />
+                <marker date="1416691449480" expanded="true" signature="39928:39945" placeholder="..." />
+                <marker date="1416691449480" expanded="true" signature="39928:39945" placeholder="..." />
+                <marker date="1416691449480" expanded="true" signature="40006:40055" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="view.html.php" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/components/com_adduserfrontend/views/adduserfrontend/view.html.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="19" selection-start="790" selection-end="806" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="345">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="fa-IR.com_adduserfrontend.ini" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/language/fa-IR/fa-IR.com_adduserfrontend.ini">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="0" selection-start="1292" selection-end="1300" vertical-scroll-proportion="0.0" vertical-offset="79" max-vertical-offset="720">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/components/com_users/controller.php" />
+        <option value="$PROJECT_DIR$/modules/mod_login/tmpl/default_logout.php" />
+        <option value="$PROJECT_DIR$/templates/shaper_financial_news/features/my_account.php" />
+        <option value="$PROJECT_DIR$/plugins/authentication/joomla/joomla.php" />
+        <option value="$PROJECT_DIR$/templates/shaper_financial_news/css/custom.css" />
+        <option value="$PROJECT_DIR$/templates/shaper_financial_news/css/template_rtl.css" />
+        <option value="$PROJECT_DIR$/modules/mod_sp_stock/mod_sp_stock.php" />
+        <option value="$PROJECT_DIR$/modules/mod_sp_stock/helper.php" />
+        <option value="$PROJECT_DIR$/components/com_conversation/models/messages.php" />
+        <option value="$PROJECT_DIR$/administrator/components/com_adduserfrontend/adduserfrontend.xml" />
+        <option value="$PROJECT_DIR$/components/com_conversation/assets/css/styles.css" />
+        <option value="$PROJECT_DIR$/components/com_k2/views/item/tmpl/item.xml" />
+        <option value="$PROJECT_DIR$/components/com_conversation/views/messages/view.html.php" />
+        <option value="$PROJECT_DIR$/administrator/templates/isis/login.php" />
+        <option value="$PROJECT_DIR$/modules/mod_bm_slide_login/tmpl/theme1.php" />
+        <option value="$PROJECT_DIR$/components/com_conversation/views/messages/tmpl/default.xml" />
+        <option value="$PROJECT_DIR$/modules/mod_sp_stock/tmpl/default.php" />
+        <option value="$PROJECT_DIR$/components/com_adduserfrontend/views/customer/view.feed.php" />
+        <option value="$PROJECT_DIR$/components/com_adduserfrontend/views/customer/view.pdf.php" />
+        <option value="$PROJECT_DIR$/components/com_adduserfrontend/views/customer/tmpl/default.xml" />
+        <option value="$PROJECT_DIR$/language/en-GB/en-GB.com_adduserfrontend.ini" />
+        <option value="$PROJECT_DIR$/components/com_adduserfrontend/controller.php" />
+        <option value="$PROJECT_DIR$/components/com_conversation/models/message.php" />
+        <option value="$PROJECT_DIR$/components/com_conversation/controller.php" />
+        <option value="$PROJECT_DIR$/language/fa-IR/fa-IR.com_conversation.ini" />
+        <option value="$PROJECT_DIR$/templates/shaper_financial_news/error.php" />
+        <option value="$PROJECT_DIR$/templates/shaper_financial_news/css/media_queries.css" />
+        <option value="$PROJECT_DIR$/language/en-GB/en-GB.tpl_shaper_financial_news.ini" />
+        <option value="$PROJECT_DIR$/plugins/system/helix/features/brand.php" />
+        <option value="$PROJECT_DIR$/components/com_conversation/assets/js/form.js" />
+        <option value="$PROJECT_DIR$/components/com_sms/models/message.php" />
+        <option value="$PROJECT_DIR$/administrator/components/com_messages/views/message/view.html.php" />
+        <option value="$PROJECT_DIR$/administrator/components/com_messages/views/message/tmpl/edit.php" />
+        <option value="$PROJECT_DIR$/administrator/components/com_messages/views/message/tmpl/default.php" />
+        <option value="$PROJECT_DIR$/administrator/components/com_messages/models/message.php" />
+        <option value="$PROJECT_DIR$/administrator/components/com_smsing/config.xml" />
+        <option value="$PROJECT_DIR$/components/com_smsing/views/message/view.html.php" />
+        <option value="$PROJECT_DIR$/administrator/language/fa-IR/fa-IR.com_smsing.ini" />
+        <option value="$PROJECT_DIR$/administrator/components/com_smsing/views/messages/view.html.php" />
+        <option value="$PROJECT_DIR$/administrator/components/com_smsing/views/messages/tmpl/default.php" />
+        <option value="$PROJECT_DIR$/components/com_smsing/models/message.php" />
+        <option value="$PROJECT_DIR$/templates/shaper_financial_news/index.php" />
+        <option value="$PROJECT_DIR$/templates/protostar/index.php" />
+        <option value="$PROJECT_DIR$/components/com_conversation/views/messages/tmpl/default.php" />
+        <option value="$PROJECT_DIR$/components/com_adduserfrontend/models/customer.php" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/components/com_adduserfrontend/views/customer/view.html.php" />
+        <option value="$PROJECT_DIR$/components/com_adduserfrontend/views/customer/tmpl/default.php" />
+        <option value="$PROJECT_DIR$/components/com_adduserfrontend/views/adduserfrontend/view.html.php" />
+        <option value="$PROJECT_DIR$/language/fa-IR/fa-IR.com_adduserfrontend.ini" />
+        <option value="$PROJECT_DIR$/components/com_adduserfrontend/views/adduserfrontend/tmpl/default.php" />
+      </list>
+    </option>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="21" />
+    <option name="width" value="1366" />
+    <option name="height" value="747" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="false">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="conver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="conver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tariin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="conver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tariin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="conver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tariin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="language" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="conver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tariin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="language" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="fa-IR" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="conver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tariin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="conver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tariin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com_adduserfrontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="conver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tariin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com_adduserfrontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="conver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tariin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com_adduserfrontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="adduserfrontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="conver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tariin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com_adduserfrontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="adduserfrontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tmpl" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="conver" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tariin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com_adduserfrontend" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FullScreen" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Downloads/com_virtuemart.2.0.2 farsi taha mm" />
+    <property name="recentsLimit" value="5" />
+  </component>
+  <component name="RunManager" selected="PHP Script.default.php">
+    <configuration default="false" name="default.php" type="PhpLocalRunConfigurationType" factoryName="PHP Console" temporary="true" path="$PROJECT_DIR$/components/com_conversation/views/messages/tmpl/default.php">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug" singleton="true">
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
+      <method />
+    </configuration>
+    <list size="1">
+      <item index="0" class="java.lang.String" itemvalue="PHP Script.default.php" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="PHP Script.default.php" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="73d7de3f-1b9a-4d78-9173-31224de6f25a" name="Default" comment="" />
+      <created>1412882510918</created>
+      <updated>1412882510918</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="21" width="1366" height="747" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2510981" sideWeight="0.4992343" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24963397" sideWeight="0.5007657" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.44563553" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+    </layout>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <option name="time" value="5" />
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/modules/mod_bm_slide_login/tmpl/theme1.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="88" selection-start="988" selection-end="988" vertical-scroll-proportion="0.36231884" vertical-offset="185" max-vertical-offset="1875" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/templates/isis/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="94" column="18" selection-start="2765" selection-end="2765" vertical-scroll-proportion="0.59395975" vertical-offset="1143" max-vertical-offset="1710" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_k2/elements/category.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="179" column="49" selection-start="9159" selection-end="9214" vertical-scroll-proportion="-0.30201343" vertical-offset="2685" max-vertical-offset="3825" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_k2/views/categories/view.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="64" column="61" selection-start="2963" selection-end="2963" vertical-scroll-proportion="0.75503355" vertical-offset="645" max-vertical-offset="3285" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/com_adduserfrontend/views/customer/view.pdf.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="33" selection-start="609" selection-end="609" vertical-scroll-proportion="0.20689656" vertical-offset="0" max-vertical-offset="580" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/com_adduserfrontend/views/customer/view.feed.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="33" selection-start="611" selection-end="611" vertical-scroll-proportion="0.20689656" vertical-offset="0" max-vertical-offset="580" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/mod_sp_stock/tmpl/default.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="69" column="0" selection-start="3366" selection-end="3366" vertical-scroll-proportion="1.2242525" vertical-offset="193" max-vertical-offset="1020" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/com_adduserfrontend/views/customer/tmpl/default.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="25" selection-start="105" selection-end="105" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="240" />
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/lib/phpstorm.jar!/resources/html5-schema/phrase.rnc">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="331" column="23" selection-start="6295" selection-end="6295" vertical-scroll-proportion="0.33278146" vertical-offset="4764" max-vertical-offset="6090" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/com_conversation/models/message.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="386" column="7" selection-start="13712" selection-end="13712" vertical-scroll-proportion="-11.75" vertical-offset="5418" max-vertical-offset="6030" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/com_adduserfrontend/controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="0" selection-start="1393" selection-end="1393" vertical-scroll-proportion="-20.625" vertical-offset="0" max-vertical-offset="615" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/atomic/css/blueprint/plugins/silksprite/sprite.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="40069" selection-start="40069" selection-end="40069" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="278" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/com_conversation/views/messages/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="604" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/language/fa-IR/fa-IR.com_conversation.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="70" column="0" selection-start="3164" selection-end="3174" vertical-scroll-proportion="0.0" vertical-offset="528" max-vertical-offset="1155" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/shaper_financial_news/error.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="58" selection-start="1077" selection-end="1077" vertical-scroll-proportion="0.25862068" vertical-offset="135" max-vertical-offset="480" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/plugins/system/helix/features/brand.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="56" selection-start="629" selection-end="629" vertical-scroll-proportion="0.2952756" vertical-offset="0" max-vertical-offset="254" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/language/en-GB/en-GB.tpl_shaper_financial_news.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="113" column="0" selection-start="4948" selection-end="4959" vertical-scroll-proportion="1.4329897" vertical-offset="1278" max-vertical-offset="1860" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/shaper_financial_news/css/media_queries.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="30" selection-start="1720" selection-end="1725" vertical-scroll-proportion="0.3057554" vertical-offset="710" max-vertical-offset="1155" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/shaper_financial_news/en-GB.tpl_shaper_financial_news.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="113" column="0" selection-start="4948" selection-end="4948" vertical-scroll-proportion="0.5074627" vertical-offset="1525" max-vertical-offset="1860" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/com_conversation/assets/js/form.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="0" selection-start="629" selection-end="629" vertical-scroll-proportion="0.4718543" vertical-offset="0" max-vertical-offset="604" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_messages/views/message/view.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="39" column="8" selection-start="830" selection-end="830" vertical-scroll-proportion="0.79518074" vertical-offset="297" max-vertical-offset="1050" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_messages/views/message/tmpl/default.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="22" selection-start="1381" selection-end="1381" vertical-scroll-proportion="0.6666667" vertical-offset="476" max-vertical-offset="870" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_smsing/access.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="375" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_k2/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="16710" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_conversation/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1455" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_messages/models/message.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="1" selection-start="450" selection-end="450" vertical-scroll-proportion="-13.325259" vertical-offset="4046" max-vertical-offset="4875" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_messages/views/message/tmpl/edit.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="18" selection-start="1454" selection-end="1454" vertical-scroll-proportion="0.7281879" vertical-offset="488" max-vertical-offset="930" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_smsing/config.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="39" selection-start="87" selection-end="93" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1635" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/com_conversation/views/messages/view.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="160" column="19" selection-start="5465" selection-end="5501" vertical-scroll-proportion="-1.2807018" vertical-offset="2967" max-vertical-offset="3705" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/language/fa-IR/fa-IR.com_smsing.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="0" selection-start="1712" selection-end="1742" vertical-scroll-proportion="-9.222222" vertical-offset="261" max-vertical-offset="1065" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/com_smsing/views/message/view.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="35" selection-start="608" selection-end="651" vertical-scroll-proportion="0.0" vertical-offset="435" max-vertical-offset="1740" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_smsing/views/messages/view.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="181" column="33" selection-start="6773" selection-end="6773" vertical-scroll-proportion="0.0" vertical-offset="2715" max-vertical-offset="3195" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/com_smsing/controllers/message.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2175" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/protostar/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="164" column="17" selection-start="6014" selection-end="6014" vertical-scroll-proportion="-3.8333333" vertical-offset="2278" max-vertical-offset="3735">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/server.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2370" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/administrator/components/com_smsing/views/messages/tmpl/default.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="16" selection-start="1719" selection-end="1719" vertical-scroll-proportion="-21.875" vertical-offset="180" max-vertical-offset="3390" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/shaper_financial_news/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="98" column="32" selection-start="3528" selection-end="3528" vertical-scroll-proportion="1.580537" vertical-offset="834" max-vertical-offset="1440" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/com_smsing/models/message.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="182" column="18" selection-start="5477" selection-end="5477" vertical-scroll-proportion="-0.30201343" vertical-offset="2730" max-vertical-offset="3930" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/com_adduserfrontend/adduserfrontend.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="0" selection-start="601" selection-end="601" vertical-scroll-proportion="0.1744186" vertical-offset="0" max-vertical-offset="602" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/language/en-GB/en-GB.com_adduserfrontend.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="0" selection-start="1394" selection-end="1403" vertical-scroll-proportion="0.794702" vertical-offset="0" max-vertical-offset="604" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="0" selection-start="8" selection-end="57" vertical-scroll-proportion="0.02586207" vertical-offset="0" max-vertical-offset="720">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/com_conversation/controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="135" column="22" selection-start="3792" selection-end="3881" vertical-scroll-proportion="-0.15280136" vertical-offset="2025" max-vertical-offset="2655">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/com_adduserfrontend/models/customer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="72" column="5" selection-start="1238" selection-end="2320" vertical-scroll-proportion="0.84126985" vertical-offset="393" max-vertical-offset="1020">
+          <folding>
+            <marker date="1416609815697" expanded="true" signature="-1:-1" placeholder="SELECT id FR..#__usergroups..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/com_adduserfrontend/models/adduserfrontend.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="604">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/com_conversation/views/messages/tmpl/default.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="22" selection-start="489" selection-end="518" vertical-scroll-proportion="0.3968254" vertical-offset="0" max-vertical-offset="8880">
+          <folding>
+            <element signature="e#6#275#0" expanded="false" />
+            <marker date="1416605550705" expanded="false" signature="-1:-1" placeholder="..." />
+            <marker date="1416605550705" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/com_conversation/views/message/tmpl/default.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1050">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/com_adduserfrontend/views/customer/view.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="53" column="41" selection-start="1670" selection-end="1670" vertical-scroll-proportion="0.49066213" vertical-offset="296" max-vertical-offset="1230">
+          <folding>
+            <marker date="1416680975675" expanded="true" signature="-1:-1" placeholder="SELECT id FR..#__usergroups..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/language/fa-IR/fa-IR.com_adduserfrontend.ini">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="0" selection-start="1292" selection-end="1300" vertical-scroll-proportion="0.0" vertical-offset="79" max-vertical-offset="720">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/com_adduserfrontend/views/adduserfrontend/view.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="19" selection-start="790" selection-end="806" vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="345">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/com_adduserfrontend/views/customer/tmpl/default.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="153" column="105" selection-start="4100" selection-end="4140" vertical-scroll-proportion="-15.791667" vertical-offset="1916" max-vertical-offset="3090">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/com_adduserfrontend/views/adduserfrontend/tmpl/default.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="821" column="32" selection-start="38157" selection-end="38157" vertical-scroll-proportion="0.5811808" vertical-offset="12000" max-vertical-offset="13575">
+          <folding>
+            <marker date="1416691449480" expanded="true" signature="1894:1922" placeholder="SELECT id FR..#__usergroups..." />
+            <marker date="1416691449480" expanded="true" signature="2607:2683" placeholder="SELECT paren..#__usergroups..." />
+            <marker date="1416691449480" expanded="true" signature="7254:7303" placeholder="select * fro..#__user_usergroup_map..." />
+            <marker date="1416691449480" expanded="true" signature="31008:31489" placeholder="..." />
+            <marker date="1416691449480" expanded="true" signature="31053:31181" placeholder="{...}" />
+            <marker date="1416691449480" expanded="true" signature="31070:31179" placeholder="{...}" />
+            <marker date="1416691449480" expanded="true" signature="31104:31142" placeholder="{...}" />
+            <marker date="1416691449480" expanded="true" signature="31153:31175" placeholder="{...}" />
+            <marker date="1416691449480" expanded="true" signature="31222:31436" placeholder="{...}" />
+            <marker date="1416691449480" expanded="true" signature="31363:31405" placeholder="{...}" />
+            <marker date="1416691449480" expanded="true" signature="31411:31434" placeholder="{...}" />
+            <marker date="1416691449480" expanded="true" signature="31470:31490" placeholder="{...}" />
+            <marker date="1416691449480" expanded="true" signature="33927:33999" placeholder="SELECT id,ti..#__usergroups..." />
+            <marker date="1416691449480" expanded="true" signature="35220:35309" placeholder="SELECT id,ti..#__usergroups..." />
+            <marker date="1416691449480" expanded="true" signature="35582:35675" placeholder="SELECT id,ti..#__usergroups..." />
+            <marker date="1416691449480" expanded="true" signature="35823:35896" placeholder="SELECT id,ti..#__usergroups..." />
+            <marker date="1416691449480" expanded="true" signature="37120:37209" placeholder="SELECT id,ti..#__usergroups..." />
+            <marker date="1416691449480" expanded="true" signature="38213:38223" placeholder="..." />
+            <marker date="1416691449480" expanded="true" signature="38332:38361" placeholder="..." />
+            <marker date="1416691449480" expanded="true" signature="38913:38967" placeholder="..." />
+            <marker date="1416691449480" expanded="true" signature="39037:39090" placeholder="..." />
+            <marker date="1416691449480" expanded="true" signature="39184:39195" placeholder="..." />
+            <marker date="1416691449480" expanded="true" signature="39484:39534" placeholder="..." />
+            <marker date="1416691449480" expanded="true" signature="39635:39689" placeholder="..." />
+            <marker date="1416691449480" expanded="true" signature="39796:39849" placeholder="..." />
+            <marker date="1416691449480" expanded="true" signature="39928:40006" placeholder="..." />
+            <marker date="1416691449480" expanded="true" signature="39928:39960" placeholder="..." />
+            <marker date="1416691449480" expanded="true" signature="39928:39945" placeholder="..." />
+            <marker date="1416691449480" expanded="true" signature="39928:39945" placeholder="..." />
+            <marker date="1416691449480" expanded="true" signature="40006:40055" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+
