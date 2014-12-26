@@ -100,11 +100,11 @@ class ConversationViewMessages extends JViewLegacy {
     }
 //---------------------------------------------------------------------
     public function hijricalender ( $year , $month , $day )
-    {
+    {       
+
         $PrevMonthDayHjr = array(0,31,62,93,124,155,186,216,246,276,306,336);
         if ( $year < 1995 || $month < 1 || $month > 12 || $day > 31 || $day < 1 )
             return 0;
-
         $daysum = $this->BaseFromMiladiDate($year , $month , $day );
         $iaddyear=0;
         while ($daysum >0 )
@@ -150,6 +150,14 @@ class ConversationViewMessages extends JViewLegacy {
         $select=$db->loadObject();
         $return=explode(',',$select->unliked);
         return  $return;
+    }
+    public function getnumberallmessage($groups){
+        $db = JFactory::getDBO();
+        $select_row="SELECT id FROM   #__conversation_message where team=".$groups;
+            $db->setQuery($select_row);
+            $db->query();
+            $rows_limit = $db->getNumRows();
+            return $rows_limit;
     }
     public function getmessage($groups,$limit=10){
         $db = JFactory::getDBO();
@@ -243,5 +251,15 @@ class ConversationViewMessages extends JViewLegacy {
                $gr_list[$i++]=$list['id'];
             }
             return $gr_list;
+    }
+public function access_text(){
+        $db = JFactory::getDBO();
+        $user = JFactory::getUser();
+        $qury="SELECT * FROM #__groupaccess where user_id=".$user->id;
+        $db->setQuery($qury);
+        $group=$db->loadObject();
+        $access_gr=$group->group_id;
+        $access_gr=explode(',',$access_gr);
+        return $access_gr;
     }
 }

@@ -177,24 +177,25 @@ class SmsingModelMessage extends JModelItem {
         $table = $this->getTable();
         return $table->delete($id);
     }
-    public function getsendsms($telephon,$message,$signature,$number_sms){
+    
+       public function getsendsms($telephon,$message,$signature,$number_sms){
         $db = JFactory::getDBO();
         $user = JFactory::getUser();
-$message="afarin";
+	
         $webServiceURL  = "http://login.parsgreen.com/Api/SendSMS.asmx?WSDL";
         $webServiceSignature = $signature;
         $webServiceNumber   = $number_sms;
-        $Mobiles      = array ($telephon); // all mobile add in this array => support one or more
+        $Mobiles      = array ($telephon);var_dump($telephon); // all mobile add in this array => support one or more
         $isFlash = false; // falsh sms => open quick in phone and after close message , cleare from phone ;
         mb_internal_encoding("utf-8");
-        $textMessage=$message; // sms text// the text or body for sending
+       $textMessage=$message; // sms text// the text or body for sending
         $textMessage= $textMessage; // encoding to utf-8
         // OR
         //$textMessage=iconv($encoding, 'UTF-8//TRANSLIT', $textMessage); // encoding to utf-8
         // OR
         //$textMessage =  utf8_encode( $str); // encoding to utf-8
 
-        $parameters['signature'] = $webServiceSignature;
+      	 $parameters['signature'] = $webServiceSignature;
         $parameters['from' ]= $webServiceNumber;
         $parameters['to' ]  = $Mobiles;
         $parameters['text' ]=$textMessage;
@@ -202,11 +203,10 @@ $message="afarin";
         $parameters['udh' ]= ""; // this is string  empty
         $parameters['success'] = 0x0; // return refrence success count // success count is number of send sms  success
         $parameters[ 'retStr'] = array( 0  ); // return refrence send status and mobile and report code for delivery
-        try
-        {
-            $con = new SoapClient($webServiceURL);
+        try{
+           $con = new SoapClient($webServiceURL);
 
-            $responseSTD = (array) $con ->SendGroupSMS($parameters);
+           $responseSTD = (array) $con->SendGroupSMS($parameters);
             echo  $responseSTD['SendGroupSMSResult'];  /// print status of request // difrent between SendGroupSMSResult and success count
             // maybe you can send request success but success count and retStr be diferent ;
 
@@ -215,7 +215,7 @@ $message="afarin";
 
             echo '#dd';
             $responseSTD['retStr'] = (array) $responseSTD['retStr'];
-            var_dump($responseSTD['retStr']);
+//            var_dump($responseSTD['retStr']);
             $re=explode(';',$responseSTD['retStr']["string"]);var_dump($re);
 
             if($responseSTD['success']==1){
@@ -258,5 +258,4 @@ $message="afarin";
         }
 
     }
-
 }

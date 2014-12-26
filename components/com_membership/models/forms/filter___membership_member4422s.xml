@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form>
+    <fields name="filter">
+        <field name="search" type="text" hint="JSEARCH_FILTER"
+               label="COM_USERS_FILTER_SEARCH_DESC"
+               class="js-stools-search-string" />
+
+        
+		<!-- Keep "_dateformat" suffix for date validation on form submit -->
+		<field name="start_member_from_dateformat" type="calendar"
+            label="COM_MEMBERSHIP_FORM_LBL___MEMBERSHIP_MEMBER4422_STATE_MEMBER"
+            description="COM_MEMBERSHIP_FORM_DESC___MEMBERSHIP_MEMBER4422_STATE_MEMBER"  onchange="this.form.submit();" />
+		<!-- Keep "_dateformat" suffix for date validation on form submit -->
+		<field name="start_member_to_dateformat" type="calendar"
+            label="COM_MEMBERSHIP_FORM_LBL___MEMBERSHIP_MEMBER4422_STATE_MEMBER"
+            description="COM_MEMBERSHIP_FORM_DESC___MEMBERSHIP_MEMBER4422_STATE_MEMBER"  onchange="this.form.submit();" /> 
+
+ 
+		<!-- Keep "_dateformat" suffix for date validation on form submit -->
+		<field name="end_member_from_dateformat" type="calendar"
+            label="COM_MEMBERSHIP_FORM_LBL___MEMBERSHIP_MEMBER4422_STATE_MEMBER"
+            description="COM_MEMBERSHIP_FORM_DESC___MEMBERSHIP_MEMBER4422_STATE_MEMBER"  onchange="this.form.submit();" />
+		<!-- Keep "_dateformat" suffix for date validation on form submit -->
+		<field name="end_member_to_dateformat" type="calendar"
+            label="COM_MEMBERSHIP_FORM_LBL___MEMBERSHIP_MEMBER4422_STATE_MEMBER"
+            description="COM_MEMBERSHIP_FORM_DESC___MEMBERSHIP_MEMBER4422_STATE_MEMBER"  onchange="this.form.submit();" />
+
+    </fields>
+</form>

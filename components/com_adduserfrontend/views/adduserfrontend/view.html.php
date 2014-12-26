@@ -24,6 +24,8 @@ class AdduserfrontendViewAdduserfrontend extends JViewLegacy {
     function display($tpl = null) {
         $this->telephon = JRequest::getVar('telephon');
         $this->type = JRequest::getVar('type');
+        $this->userids = JRequest::getVar('userid');
+        $this->us = JFactory::getUser($this->userids);
         parent::display($tpl);
     }
 }

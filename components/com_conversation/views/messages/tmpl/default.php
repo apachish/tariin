@@ -26,6 +26,41 @@ $user = JFactory::getUser();
 <link rel="stylesheet" href="components/com_conversation/assets/css/demos.css">
 <link rel="stylesheet" href="components/com_conversation/assets/css/base/jquery.ui.all.css">
 <script>
+var g_days=[31,28,31,30,31,30,31,31,30,31,30,31], j_days=[31,31,31,31,31,31,30,30,30,30,30,29];
+function gregorianToJalali(g_y, g_m, g_d)
+{
+    g_y = parseInt(g_y);
+    g_m = parseInt(g_m);
+    g_d = parseInt(g_d);
+    var gy = g_y-1600;
+    var gm = g_m-1;
+    var gd = g_d-1;
+    var g_day_no = 365*gy+parseInt((gy+3) / 4)-parseInt((gy+99)/100)+parseInt((gy+399)/400);
+    for (var i=0; i < gm; ++i)
+        g_day_no += g_days[i];
+    if (gm>1 && ((gy%4==0 && gy%100!=0) || (gy%400==0)))
+        ++g_day_no;
+    g_day_no += gd;
+    var j_day_no = g_day_no-79;
+    var j_np = parseInt(j_day_no/ 12053);
+    j_day_no %= 12053;
+    var jy = 979+33*j_np+4*parseInt(j_day_no/1461);
+    j_day_no %= 1461;
+    if(j_day_no >= 366)
+    {
+        jy += parseInt((j_day_no-1)/ 365);
+        j_day_no = (j_day_no-1)%365;
+    }
+    for(var i = 0; i < 11 && j_day_no >= j_days[i]; ++i)
+        j_day_no -= j_days[i];
+    var jm = i+1;
+    var jd = j_day_no+1;
+    if(jm<10){
+        jm='0'+jm;}
+         if(jd<10){
+        jd='0'+jd;}
+    return [jy,jm,jd];
+}
     jQuery(function() {
         //create a new WebSocket object.
         var wsUri = "ws://37.59.166.168:9000/server.php";
@@ -40,7 +75,86 @@ $user = JFactory::getUser();
         {
             document.getElementById("styled").style.background=color
         }
+        jQuery('.loadmore').live('click',function(){
+            var dataalias=jQuery(this).attr('data-alias');
+                        var lastid=jQuery(this).attr('data-id');
+            var group=jQuery(this).attr('data-group');
+                        var usernow='<?php echo $user->id;?>';
+                        var userlast;var timelast;var datelast;
+                        jQuery('.message_load').hide();
+            jQuery.ajax(
+                {
+                    url : "index.php?option=com_conversation&task=loadmoremessage",
+                    type: "POST",
+                    data : {group:group,lastid:lastid,numbermessage:dataalias},
+                    success:function(data, textStatus, jqXHR)
+                    {
+                        console.log(jQuery.parseJSON(data));
+                         var ret = jQuery.parseJSON(data);console.log(ret['exist']);
+                        //console.log(ret[0].Name);// alert(ret.state); alert(data);
+                        opt='';
+                        if(ret['exist']){
+                        opt+='<div class="loadmore" data-id="'+ret['query'][0].id+'"';
+                        opt+='data-alias="'+ret['exist']+'"';
+                        opt+='data-group="'+ret['query'][0].team+'">';
+                        opt+='<span class="message_load">دیدن پیام های گذشته</span>';
+                        opt+='</div>';}
+                        jQuery.each(ret['query'] ,function(_index, _val){
+                            //alert( _val.Name);
+                            var year=_val.create_time.substr(0,4);
+                            var month=_val.create_time.substr(5,2);
+                            var day=_val.create_time.substr(8,2);
+                            var data = String(gregorianToJalali(year, month, day)).replace(',','/').replace(',','/');
+                            opt=opt+'<li class="messege-row">';
+                            if(data != datelast){
+                                opt+='<div class="date_message">'+data+'</div>';
+                            }
+                            opt+='<ul class="message-list';
+                if(_val.sender==usernow){
+                    opt+=' sent-message '
+                }else{
+                    opt+=' received-message '
+                }
+                //opt+=' last_ul'+_val.team;
+                opt+='">';
+                opt+='<li class="message-single';
+                if(userlast != _val.sender ||  (_val.checked_out-timelast)>60){
+                opt+='  message-first';}
+                opt+='">';
+                opt+='<div class="avatar-container">';
+                opt+='<img src="components/com_conversation/assets/img/avatars/1.jpg">';
+                opt+='</div>';
+                opt+='<div class="message-container">';
+                opt+='<div class="message-text">';
+                opt+='<p class="time_message"><?php
+                            echo $user->name;
 
+                            ?></p><p>';
+                opt+=_val.message;
+                opt+='</p><p align="left" class="time_message"><span>'+_val.create_time.substr(11, 5)+'</span</p></div>';
+                opt+='</div>';
+                opt+='</li><p class="time"><div class="like" title="<?php echo JText::_('TITLE_LIKE');?>" id="like_'+_val.id+'" ></div><span id="num'+_val.id+'"  class="likenumber">0</span>  <div class="unlike" title="<?php echo JText::_('TITLE_UNLIKE');?>" id="unlike_'+_val.id+'" ></div>';
+                opt+='<span id="numunlike'+_val.id+'"  class="unlikenumber">0</span>  <span>.:'+_val.id+':.</span></p></ul></li>';
+                userlast=_val.sender;
+                timelast=_val.checked_out;
+                datelast=data;
+
+                        });
+                        jQuery('.loadmore').append(opt);
+                        jQuery('.loadmore').attr('data-alias',ret['exist']);
+                        jQuery('.loadmore').attr('data-id',ret['query'][0].id);
+                        jQuery('.loadmore').attr('data-group',ret['query'][0].team);
+                        if(ret['exist']==0){
+                            jQuery('.message_load').text('');
+                        }
+                    },
+                    error: function(jqXHR, textStatus, errorThrown)
+                    {
+                        //alert(jqXHR);
+                        //if fails
+                    }
+                });       
+      });
         function loaditem(group){
             jQuery.ajax(
                 {
@@ -111,16 +225,15 @@ $user = JFactory::getUser();
             if(last){
                 opt='<li class="message-single">';
                 opt+='<div class="avatar-container">';
-                opt+='<img src="/components/com_conversation/assets/img/avatars/1.jpg">';
+                opt+='<img src="components/com_conversation/assets/img/avatars/1.jpg">';
                 opt+='</div>';
                 opt+='<div class="message-container">';
                 opt+='<div class="message-text">';
-                opt+='<p class="time_message"><?php
+                opt+='<p class="time_message" class="time_message"><?php
                             echo $user->name;
-                            echo '<span>  '.date("H:i").'</span>';
                             ?></p><p>';
                 opt+=message;
-                opt+='</p></div>';
+                opt+='</p><p align="left"><?php  echo '<span>  '.date("H:i").'</span>'; ?></p></div>';
                 opt+='</div>';
                 opt+='</li><p class="time"><div class="like" id="like_'+id+'" title="<?php echo JText::_('TITLE_LIKE');?>" ></div><span id="num'+id+'"  class="likenumber">0</span>  <div class="unlike" id="unlike_'+id+'" title="<?php echo JText::_('TITLE_UNLIKE');?>"></div>';
                 opt+='<span id="numunlike'+id+'"  class="unlikenumber">0</span>  <span>.:'+id+':.</span></p>';
@@ -136,16 +249,16 @@ $user = JFactory::getUser();
                 opt+=' last_ul'+groups+'">';
                 opt+='<li class="message-single message-first">';
                 opt+='<div class="avatar-container">';
-                opt+='<img src="/components/com_conversation/assets/img/avatars/1.jpg">';
+                opt+='<img src="components/com_conversation/assets/img/avatars/1.jpg">';
                 opt+='</div>';
                 opt+='<div class="message-container">';
                 opt+='<div class="message-text">';
                 opt+='<p class="time_message"><?php
                             echo $user->name;
-                            echo '<span>  '.date("H:i").'</span>';
+
                             ?></p><p>';
                 opt+=message;
-                opt+='</p></div>';
+                opt+='</p><p align="left" class="time_message"><?php  echo '<span>  '.date("H:i").'</span>'; ?></p></div>';
                 opt+='</div>';
                 opt+='</li><p class="time"><div class="like" title="<?php echo JText::_('TITLE_LIKE');?>" id="like_'+id+'" ></div><span id="num'+id+'"  class="likenumber">0</span>  <div class="unlike" title="<?php echo JText::_('TITLE_UNLIKE');?>" id="unlike_'+id+'" ></div>';
                 opt+='<span id="numunlike'+id+'"  class="unlikenumber">0</span>  <span>.:'+id+':.</span></p></ul></li>';
@@ -296,8 +409,7 @@ $user = JFactory::getUser();
         jQuery("#tabs ul li").focusin(function(){
             var group=jQuery(this).find('a').attr('id');
             console.log(group);
-            loaditem(group)
-
+            loaditem(group);
         })
         jQuery(".ajaxform").focusin(function(){
             var group=jQuery(this).find('input[name="groups"]').val();
@@ -345,6 +457,15 @@ $user = JFactory::getUser();
 <!--});-->
 <!--jQuery('.city').html(opt);-->
 <style type="text/css">
+    .message_load{
+        width: 100%;
+        height: 120px;
+        border: 3px solid #cccccc;
+        padding: 5px;
+        font-family: Tahoma, sans-serif;
+        background-position: bottom right;
+        background-repeat: no-repeat;
+    }
     textarea#styled {
         width: 100%;
         height: 120px;
@@ -366,25 +487,25 @@ $user = JFactory::getUser();
         display: inline;
     }
     .like{
-        background: url('/components/com_conversation/assets/img/like.png');
+        background: url('components/com_conversation/assets/img/like.png');
         width: 20px;
         height: 20px;
         display: inline-block;
     }
     .liked{
-        background: url('/components/com_conversation/assets/img/liked.png');
+        background: url('components/com_conversation/assets/img/liked.png');
         width: 20px;
         height: 20px;
         display: inline-block;
     }
     .unlike{
-        background: url('/components/com_conversation/assets/img/unlike.png');
+        background: url('components/com_conversation/assets/img/unlike.png');
         width: 20px;
         height: 20px;
         display: inline-block;
     }
     .unliked{
-        background: url('/components/com_conversation/assets/img/unliked.png');
+        background: url('components/com_conversation/assets/img/unliked.png');
         width: 20px;
         height: 20px;
         display: inline-block;
@@ -404,11 +525,13 @@ $user = JFactory::getUser();
     }
 </style>
 
-<link rel="shortcut icon" type="image/x-icon" href="/components/com_conversation/assets/img/favicon.ico">
-<link rel="stylesheet" href="/components/com_conversation/assets/css/styles.css">
+<link rel="shortcut icon" type="image/x-icon" href="components/com_conversation/assets/img/favicon.ico">
+<link rel="stylesheet" href="components/com_conversation/assets/css/styles.css">
 
 <?php
 $groupsize=sizeof($user->groups);
+$access_group=$this->access_text();
+
 echo '<div id="tabs" class="main_contain">
                 <ul>';
 foreach($user->groups as $grops){
@@ -431,11 +554,19 @@ foreach($user->groups as $grops){
         <div class="messages-wrapper">
             <ul class="messages-list group<?php echo $grops;?>">
                 <?php
-                $userlast=0;
-                $daylast=0;
-                $timelast=0;
-                $number=0;
-                $messages=$this->getmessage($grops);
+                    $userlast=0;
+                    $daylast=0;
+                    $timelast=0;
+                    $number=0;
+                    $messages=$this->getmessage($grops);$allmessage=$this->getnumberallmessage($grops);
+                ?>
+                    <div class="loadmore" data-id="<?php echo $messages[0]->id;?>" 
+                         data-alias="<?php echo $allmessage-sizeof($messages);?>"
+                         data-group="<?php echo  $grops;?>"
+                         >
+                    <span class='message_load'> دیدن پیام های گذشته</span>
+                    </div>
+                <?php
                 $size=sizeof($messages);
                 foreach($messages as $message){
                 $year=substr($message->create_time,0,4);
@@ -443,8 +574,7 @@ foreach($user->groups as $grops){
                 $day=substr($message->create_time,8,2);
 
                  $date=$this->hijricalender($year,$month,$day);
-                if($date!=$datelast)
-                    echo '<div class="date_message">'.$date.'</div>';
+               
 
                 if($message->created_by!=$userlast || ($message->checked_out-$timelast)>60){
                     if($number){
@@ -456,11 +586,13 @@ foreach($user->groups as $grops){
                 {
                 ?>
                 <li class="messege-row">
+                     <?php if($date!=$datelast)
+                    echo '<div class="date_message">'.$date.'</div>';?>
                     <ul class="message-list sent-message <?php if(!$message->father){ echo 'last_ul'.$message->team;  }?>">
                         <?php }?>
                         <li class="message-single <?php if(!$i){?>message-first<?php }?>">
                             <div class="avatar-container">
-                                <img src="/components/com_conversation/assets/img/avatars/1.jpg">
+                                <img src="components/com_conversation/assets/img/avatars/1.jpg">
                             </div>
                             <div class="message-container">
                                 <div class="message-text" >
@@ -469,9 +601,10 @@ foreach($user->groups as $grops){
 
                                     $userr =& JFactory::getUser($message->sender);
                                     echo $userr->name;
-                                        echo '<span>  '.$time=substr($message->create_time,10,6).'</span>';
+
                                         echo '</p>';
                                      echo '<p>'.$message->message.'</p>';
+                                            echo '<p class="time_message" align="left"><span>  '.$time=substr($message->create_time,10,6).'</span></p>';
 
                                     ?>
                                 </div>
@@ -504,7 +637,7 @@ foreach($user->groups as $grops){
                                 <?php }?>
                                 <li class="message-single <?php if(!$i){?>message-first<?php }?>">
                                     <div class="avatar-container">
-                                        <img src="/components/com_conversation/assets/img/avatars/1.jpg">
+                                        <img src="components/com_conversation/assets/img/avatars/1.jpg">
                                     </div>
                                     <div class="message-container">
                                         <div class="message-text" >
@@ -513,9 +646,10 @@ foreach($user->groups as $grops){
 
                                             $userr =& JFactory::getUser($message->sender);
                                             echo $userr->name;
-                                            echo '<span>  '.$time=substr($message->create_time,10,6).'</span>';
+
                                             echo '</p>';
                                             echo '<p>'.$message->message.'</p>';
+                                            echo '<p class="time_message" align="left"><span>  '.$time=substr($message->create_time,10,6).'</span></p>';
 
                                             ?>
 
@@ -562,6 +696,7 @@ foreach($user->groups as $grops){
 
         </div>
 
+<?php if(in_array($grops,$access_group)){?>
 
         <br>
         <form name="ajaxform" class="ajaxform" action="#" method="POST" enctype="multipart/form-data" target="RSS_target" onsubmit="starting();" accept-charset="utf-8" >
@@ -572,7 +707,7 @@ foreach($user->groups as $grops){
             <input type="submit" value="<?php echo JText::_('COM_CONVERSATION_SEND')?>">
             <iframe id="RSS_target" name="RSS_target" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>
         </form>
-
+<?php } ?>
         </body>
 
         <?php

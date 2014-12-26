@@ -219,6 +219,7 @@ class ConversationTablemessage extends JTable {
     public function delete($pk = null) {
         $this->load($pk);
         $result = parent::delete($pk);
+
         if ($result) {
             
             

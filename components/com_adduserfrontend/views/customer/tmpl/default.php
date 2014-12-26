@@ -128,6 +128,7 @@ $style='
         border-left: 1px solid #999;
     }';
 $doc->addStyleDeclaration($style);
+
 ?>
 <div class='searchBox'>
     <button id='button_search'>Search</button>
@@ -142,17 +143,25 @@ $doc->addStyleDeclaration($style);
         <th><?php echo JText::_('LIST_ROW')?></th>
         <th><?php echo JText::_('LIST_NAME')?></th>
         <th><?php echo JText::_('LIST_TELEPHON')?></th>
+        <th><?php echo JText::_('GROUP')?></th>
         <th><?php echo JText::_('LIST_EDIT')?></th>
     </tr>
     <?php $i=1; foreach( $this->customer as $customer){?>
     <tr>
         <td data-th="<?php echo JText::_('LIST_ROW')?>"><span><?php echo $i;?></span></td>
         <td data-th="<?php echo JText::_('LIST_NAME')?>"><span><?php echo $customer->name;?></span></td>
-        <td data-th="<?php echo JText::_('LIST_TELEPHON')?>"><span><?php echo str_replace('"','',$this->gettelephon($customer->id));?></span></td>
+        <td data-th="<?php echo JText::_('LIST_TELEPHON')?>">
+            <a href="index.php?option=com_adduserfrontend&view=adduserfrontend&userid=<?php echo  $customer->id;?>&type=edit&telephon=<?php echo str_replace('"','',$this->gettelephon($customer->id));?>">
+            <span><?php echo str_replace('"','',$this->gettelephon($customer->id));?></span>
+        </a>
+        </td>
+        <td data-th="<?php echo JText::_('GROUP')?>"><span><?php $user = JFactory::getUser($customer->id);
+                  foreach($user->groups as $gr){
+                      $re=$this->getUserGroups($gr);
+                     echo $re->text.'  ';
+                  }?></span></td>
         <td data-th="<?php echo JText::_('LIST_EDIT')?>"><span>
-                <a href="index.php?option=com_adduserfrontend&view=adduserfrontend&type=edit&telephon=<?php echo str_replace('"','',$this->gettelephon($customer->id));?>">
-                <input type="radio" class="edit" value="<?php echo $customer->name;?>" name="edit">
-                </a>
+
             </span></td>
     </tr>
     <?php $i++;}?>

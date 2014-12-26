@@ -123,6 +123,18 @@ class ConversationController extends JControllerLegacy {
             }
         }
     }
+    public function loadmoremessage(){
+        $model = &$this->getModel('message');
+        $result = $model->loaedmoremassege();
+            if(!$result) {
+                echo $result;
+                exit();
+            }else{
+                echo json_encode($result);
+                exit();
+            }
+        
+    }
     public function searched(){
         $search = JRequest::getVar('search_tel');
         $model = &$this->getModel('message');

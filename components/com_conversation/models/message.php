@@ -354,7 +354,22 @@ class ConversationModelMessage extends JModelItem {
         }
 
     }
-
+    public function loaedmoremassege($groups,$rows_limit){
+        $groups = JRequest::getVar('group');
+        $lastid = JRequest::getVar('lastid');
+        $numbermessage = JRequest::getVar('numbermessage');
+         $first_limit=$numbermessage-10;
+         if($first_limit<0){
+            $first_limit=0;
+         }
+        $db = JFactory::getDBO();
+        $user = JFactory::getUser();
+        $query_select="SELECT * FROM  #__conversation_message where team=".$groups." and id < ".$lastid." ORDER BY create_time ASC LIMIT ".$first_limit.",".$numbermessage;
+        $db->setQuery($query_select);
+        $select_more['query']=$db->loadAssocList();
+        $select_more['exist']=$first_limit;
+        return  $select_more;
+    }
     public function loaedlastmassege(){
         $db = JFactory::getDBO();
         $user = JFactory::getUser();

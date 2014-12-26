@@ -13,7 +13,7 @@ class JConfig {
 	public $captcha = '0';
 	public $cookie_domain = '';
 	public $cookie_path = '';
-	public $db = 'conver';
+	public $db = 'tariin';
 	public $dbprefix = 'ipb1e_';
 	public $dbtype = 'mysql';
 	public $debug = '0';
@@ -37,7 +37,7 @@ class JConfig {
 	public $lifetime = '15';
 	public $list_limit = '20';
 	public $live_site = '';
-	public $log_path = '/home/shahriar/test_site/conver/log';
+	public $log_path = '/home/shahriar/tariin/log';
 	public $mailer = 'mail';
 	public $mailfrom = 'apachish@gmail.com';
 	public $memcache_compress = '1';
@@ -49,9 +49,9 @@ class JConfig {
 	public $offline_message = 'این سایت موقتا به دلیل تعمیرات در دسترس نیست.<br /> لطفا بعداً مراجعه فرمایید.';
 	public $offset = 'UTC';
 	public $offset_user = 'UTC';
-	public $password = 'rtvilw6AVcs';
+	public $password = 'root';
 	public $robots = '';
-	public $secret = 'Zb3bpmaPu3HooaEZzSwHuD2Odo2CvEkb';
+	public $secret = 'QPt5WfI9Wq7FroL6EmBxPZunrhov2O12';
 	public $sef = '0';
 	public $sef_rewrite = '0';
 	public $sef_suffix = '0';
@@ -65,9 +65,9 @@ class JConfig {
 	public $smtpport = '25';
 	public $smtpsecure = 'none';
 	public $smtpuser = '';
-	public $tmp_path = '/home/shahriar/test_site/conver/tmp';
+	public $tmp_path = '/home/shahriar/tariin/tmp';
 	public $unicodeslugs = '0';
-	public $user = 'conver';
+	public $user = 'root';
 	public $proxy_enable = '0';
 	public $proxy_host = '';
 	public $proxy_port = '';

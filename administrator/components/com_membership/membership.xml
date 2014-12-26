@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="3.0" method="upgrade">
+    <name>com_membership</name>
+    <creationDate>2014-12-21</creationDate>
+    <copyright>Copyright (C) 2014. All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <author>shahriar</author>
+    <authorEmail>apachish@gmail.com</authorEmail>
+    <authorUrl>http://bmsystem.ir</authorUrl>
+    <version>1.0.0</version>
+    <description></description>
+    
+    
+    
+    <install> <!-- Runs on install -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/install.mysql.utf8.sql</file>
+        </sql>
+    </install>
+    <uninstall> <!-- Runs on uninstall -->
+        <sql>
+            <file driver="mysql" charset="utf8">sql/uninstall.mysql.utf8.sql</file>
+        </sql>
+    </uninstall>
+
+    <files folder="site">
+        <filename>index.html</filename>
+        <filename>membership.php</filename>
+        <filename>controller.php</filename>
+        <filename>router.php</filename>
+        <folder>views</folder>
+        <folder>models</folder>
+        <folder>controllers</folder>
+        <folder>helpers</folder>
+        <folder>assets</folder>
+    </files>
+    <languages folder="languages/site">
+        
+			<language tag="en-GB">en-GB/en-GB.com_membership.ini</language>
+			<language tag="fa-IR">fa-IR/fa-IR.com_membership.ini</language>
+    </languages>
+    <administration>
+        <menu img="components/com_membership/assets/images/s_com_membership.png" >COM_MEMBERSHIP</menu>
+        <submenu>
+            
+			<menu link="option=com_membership&amp;view=__membership_category6955s" view="__membership_category6955s" img="components/com_membership/assets/images/s___membership_category6955s.png" alt="Membership/__membership_category6955s">COM_MEMBERSHIP_TITLE___MEMBERSHIP_CATEGORY6955S</menu>
+                        <menu link="option=com_membership&amp;view=__membership_member4422s" view="__membership_member4422s" img="components/com_membership/assets/images/s___membership_member4422s.png" alt="Membership/__membership_member4422s">COM_MEMBERSHIP_TITLE___MEMBERSHIP_MEMBER4422S</menu>
+
+        </submenu>
+        <files folder="administrator">
+            <filename>access.xml</filename>
+            <filename>config.xml</filename>
+            <filename>controller.php</filename>
+            <filename>index.html</filename>
+            <filename>membership.php</filename>
+            <folder>controllers</folder>
+            <folder>assets</folder>
+            <folder>helpers</folder>
+            <folder>models</folder>
+            <folder>sql</folder>
+            <folder>tables</folder>
+            <folder>views</folder>
+        </files>
+        <languages folder="languages/administrator">
+            
+			<language tag="en-GB">en-GB/en-GB.com_membership.ini</language>
+			<language tag="en-GB">en-GB/en-GB.com_membership.sys.ini</language>
+			<language tag="fa-IR">fa-IR/fa-IR.com_membership.ini</language>
+			<language tag="fa-IR">fa-IR/fa-IR.com_membership.sys.ini</language>
+        </languages>
+    </administration>
+    <plugins>
+        <plugin group="search" plugin="membership"/>
+    </plugins>
+    
+</extension>
+<!-- Component built by the Joomla Component Creator -->
+<!-- http://www.component-creator.com/ -->
