@@ -37,7 +37,8 @@ require_once(dirname(__FILE__).'/lib/helix.php');
 	<div class="sp-wrap clearfix">
 		 <div id="sp-top-bar" class="clearfix">
 			 <?php 
-				 $helix->addFeatures('date'); //date feature
+				 $helix->addFeatures('date'); 
+
 				 $helix->addModules('top-menu'); // module top-menu
 				 $helix->addFeatures('my_account'); //feature my_account
 				 $helix->addModules('search, share'); // share and search

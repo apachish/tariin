@@ -21,20 +21,28 @@ foreach ($fieldsets as $group => $fieldset): // Iterate through the form fieldse
 	$fields = $this->form->getFieldset($group);
 	if (count($fields)):
 ?>
+<style type="text/css">
+.dl-horizontal{
+	width: 100%;
+
+}
+</style>
 <?php //if ($this->params->get('show_tags')) : ?>
 		<?php  //$this->tagLayout = new JLayoutFile('joomla.content.tags'); ?>
 		<?php //echo $this->tagLayout->render($this->tags); ?>
 	<?php // endif; ?>
-
-<fieldset id="users-profile-custom" class="users-profile-custom-<?php echo $group;?>">
+<?php if($fields['jform_profile_phone']->value || $fields['jform_profile_city']->value):?>
+<fieldset  class="users-profile-custom-<?php echo $group;?>">
 	<?php if (isset($fieldset->label)):// If the fieldset has a label set, display it as the legend.?>
 	<legend><?php echo JText::_($fieldset->label); ?></legend>
 	<?php endif;?>
-	<dl class="dl-horizontal">
+	<table class="dl-horizontal">
 	<?php foreach ($fields as $field):
-		if (!$field->hidden) :?>
-		<dt><?php echo $field->title; ?></dt>
-		<dd>
+		if (!$field->hidden) :
+		if($field->value): ?>
+		<tr>
+			<td><?php echo $field->title; ?></td>
+			<td>
 			<?php if (JHtml::isRegistered('users.'.$field->id)):?>
 				<?php echo JHtml::_('users.'.$field->id, $field->value);?>
 			<?php elseif (JHtml::isRegistered('users.'.$field->fieldname)):?>
@@ -44,10 +52,15 @@ foreach ($fieldsets as $group => $fieldset): // Iterate through the form fieldse
 			<?php else:?>
 				<?php echo JHtml::_('users.value', $field->value);?>
 			<?php endif;?>
-		</dd>
+		</td>
+				</tr>
+						<?php endif;?>
+
 		<?php endif;?>
 	<?php endforeach;?>
-	</dl>
+	</table>
 </fieldset>
+	<?php endif;?>
+
 	<?php endif;?>
 <?php endforeach;?>

@@ -7,7 +7,7 @@ defined('_JEXEC') or die('Restricted access');
 // Access check.
 if (!JFactory::getUser()->authorise('adduserfrontend.createuser', 'com_adduserfrontend'))
 {
-	return JError::raiseWarning(404, JText::_('')); // Display nothing because controller already does show that message also
+    return JError::raiseWarning(404, JText::_('')); // Display nothing because controller already does show that message also
 }
 ?>
 <?php
@@ -618,14 +618,16 @@ history.go(-1);
 // Show message to user if CB mode is OFF
                             if($operationmode == 0){
                                 if($this->type=='edit'){
-                                    echo '<strong>' . $username . '</strong> <br /><br /><strong>' . JText::_("EDITEDUSERTOJOOMLA") . '</strong><br>';
+                                    echo '<strong>'.JText::_("USERNAME").':' . $username . '</strong><strong>' . JText::_("EDITEDUSERTOJOOMLA") . '</strong><br>';
                                    // echo $body   ="<p>".JText::_("USERNAME").": ".$username."</p><p>".JText::_("PASSWORD").": ".$showpass."<br>";
-                                    $sms   ="<p>".JText::_("USERNAME").": ".$username."</p>add group".JText::_("DONOTRESPOND")."</p>";
+                                   $sms   ="<p>".JText::_("TEXT_SMS_EDIT")."</p>%0a<p>".JText::_("USERNAME").":%0a ".$username."</p>%0a<p>".JText::_("DONOTRESPOND")."</p>";
                                 }else{
                                     echo '<br /><br /><strong>' . JText::_("ADDEDUSERTOJOOMLA") . '</strong><br><strong>' . $username . '</strong> ' . JText::_("HASBEENADDEDTOJOOMLA") . '';
                                     echo $body   ="<p>".JText::_("USERNAME").": ".$username."</p><p>".JText::_("PASSWORD").": ".$showpass."<br>";
-                                    $sms   ="<p>".JText::_("TEXT_SMS")."</p><p>".JText::_("USERNAME").": ".$username."</p><p>".JText::_("PASSWORD").": ".$showpass."<br>".JText::_("DONOTRESPOND")."</p>";
-                                                                    $tel=substr($username,1,10);
+                                         $sms   ="<p>".JText::_("TEXT_SMS")."</p>%0a<p>".JText::_("USERNAME").":%0a ".$username."</p>%0a<p>".JText::_("PASSWORD").": %0a".$showpass."%0a".JText::_("DONOTRESPOND")."</p>";
+
+                                }
+                                 $tel=substr($username,1,10);
                                 $scrip="  jQuery(document).ready(function() {
                                         jQuery.ajax(
                                             {
@@ -637,10 +639,9 @@ history.go(-1);
 
                                                 }
                                             });});";
+                                
                                 $doc =JFactory::getDocument();
                                 $doc->addScriptDeclaration( $scrip );
-                                }
-
 
                             }
 // Send notification email to added user
@@ -753,7 +754,6 @@ echo '}
 }
 </script>';
 echo '<div>
-<h1>'.JText::_( 'ADD_USER').':</h1>
 <form onsubmit="return validate_form(this);"  action="'.JRoute::_('index.php?option=com_adduserfrontend&Itemid='.$itemid).'" method="post" enctype="multipart/form-data">
 <input type="hidden" name="import" value="1" />
 <table cellpadding="4px">';
@@ -868,6 +868,25 @@ $result = array_merge($result,$result2); // All allowed usergroups
 sort($result); // Sort all groups numeric
 }
 
+if( $namemode == "1" ) {
+echo'<tr>
+<td>'.JText::_( 'FIRSTNAME').':</td>
+<td><input type="text" name="firstname" value="'.$savedfirstname.'" /></td>
+</tr>
+<tr>
+<td>'.JText::_( 'LASTNAME').':</td>
+<td><input type="text" name="lastname" value="'.$savedlastname.'" /></td>
+         </tr>';
+} else {
+echo '<tr>
+<td width="130" style="text-align: left"><h1>'.JText::_( 'ADD_USER').':</h1>
+</td>
+<td><input type="text"';
+    if($this->type=='edit')
+    echo 'readonly="readonly" ';
+    echo 'name="name" value="'.($this->telephon ?$this->telephon :$savedname).'" /></td>
+</tr>';
+}
 
 // Echo the selectbox
 echo '<tr><td style="text-align: left">'.JText::_( 'GROUP').':</td>';
@@ -907,24 +926,7 @@ echo '</td>';
 echo '</tr>';
 }
 // Namemode
-if( $namemode == "1" ) {
-echo'<tr>
-<td>'.JText::_( 'FIRSTNAME').':</td>
-<td><input type="text" name="firstname" value="'.$savedfirstname.'" /></td>
-</tr>
-<tr>
-<td>'.JText::_( 'LASTNAME').':</td>
-<td><input type="text" name="lastname" value="'.$savedlastname.'" /></td>
-         </tr>';
-} else {
-echo '<tr>
-<td width="130" style="text-align: left">'.JText::_( 'TELEPHON').':</td>
-<td><input type="text"';
-    if($this->type=='edit')
-    echo 'readonly="readonly" ';
-    echo 'name="name" value="'.($this->telephon ?$this->telephon :$savedname).'" /></td>
-</tr>';
-}
+
 
 if( $genericemail !== "1" ) {
 echo '<tr>
@@ -948,9 +950,10 @@ echo '<tr>
 echo '<tr>
 <td><input type="hidden" value="'.$this->userids.'" name="id_user"></td>
 <td>';
-    if($this->type=='edit')
+    if($this->type=='edit'){
 echo '<input type="submit" name="submit" value="'.JText::_( 'EDITNOW').'" />';
-    else
+echo '<input type="hidden" value="edit" name="type" />';
+}else
 echo '<input type="submit" name="submit" value="'.JText::_( 'ADDNOW').'" />';
 echo '</td></tr>
 </table>

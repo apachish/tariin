@@ -133,7 +133,7 @@ $doc->addStyleDeclaration($style);
 <div class='searchBox'>
     <button id='button_search'>Search</button>
 
-    <input type='text' class="form-control" id="keyword"  placeholder='search...'/>
+    <input type='text' class="form-control" id="keyword" onkeypress='return event.charCode >= 48 && event.charCode <= 57' placeholder='search...'/>
 </div>
 <!--<h1>RWD List to Table</h1>-->
 <div class="resultsearch">
@@ -144,7 +144,6 @@ $doc->addStyleDeclaration($style);
         <th><?php echo JText::_('LIST_NAME')?></th>
         <th><?php echo JText::_('LIST_TELEPHON')?></th>
         <th><?php echo JText::_('GROUP')?></th>
-        <th><?php echo JText::_('LIST_EDIT')?></th>
     </tr>
     <?php $i=1; foreach( $this->customer as $customer){?>
     <tr>
@@ -160,7 +159,6 @@ $doc->addStyleDeclaration($style);
                       $re=$this->getUserGroups($gr);
                      echo $re->text.'  ';
                   }?></span></td>
-        <td data-th="<?php echo JText::_('LIST_EDIT')?>"><span>
 
             </span></td>
     </tr>

@@ -12,5 +12,12 @@
 defined ('_JEXEC') or die ('resticted aceess');
 ?>
 <span class="sp_date">
-	<?php echo JHtml::_('date', 'now', 'l, d F Y') ?>
+
+	<?php echo JHtml::_('date', 'now', 'l, d F Y');
+	echo '|';//date feature
+				 			$user = JFactory::getUser();
+
+	echo '  <span style="color:blue">'.JText::sprintf('MOD_LOGIN_HINAME', htmlspecialchars($user->get('name'))).'<span>';
+	 ?>
+
 </span>

@@ -15,40 +15,40 @@ defined('_JEXEC') or die;
 	<legend>
 		<?php echo JText::_('COM_USERS_PROFILE_CORE_LEGEND'); ?>
 	</legend>
-	<dl class="dl-horizontal">
-		<dt>
+	<table class="dl-horizontal">
+		<tr><td>
 			<?php echo JText::_('COM_USERS_PROFILE_NAME_LABEL'); ?>
-		</dt>
-		<dd>
+		</td>
+		<td>
 			<?php echo $this->data->name; ?>
-		</dd>
-		<dt>
+		</td></tr>
+		<tr><td>
 			<?php echo JText::_('COM_USERS_PROFILE_USERNAME_LABEL'); ?>
-		</dt>
-		<dd>
+		</td>
+		<td>
 			<?php echo htmlspecialchars($this->data->username); ?>
-		</dd>
-		<dt>
+		</td></tr>
+		<tr><td>
 			<?php echo JText::_('COM_USERS_PROFILE_REGISTERED_DATE_LABEL'); ?>
-		</dt>
-		<dd>
+		</td>
+		<td>
 			<?php echo JHtml::_('date', $this->data->registerDate); ?>
-		</dd>
-		<dt>
+		</td></tr>
+		<tr><td>
 			<?php echo JText::_('COM_USERS_PROFILE_LAST_VISITED_DATE_LABEL'); ?>
-		</dt>
+		</td>
 
 		<?php if ($this->data->lastvisitDate != '0000-00-00 00:00:00'){?>
-			<dd>
+			<td>
 				<?php echo JHtml::_('date', $this->data->lastvisitDate); ?>
-			</dd>
+			</td>
 		<?php }
 		else
 		{?>
-			<dd>
+			<td>
 				<?php echo JText::_('COM_USERS_PROFILE_NEVER_VISITED'); ?>
-			</dd>
+			</td>
 		<?php } ?>
-
-	</dl>
+		</tr>
+	</table>
 </fieldset>
