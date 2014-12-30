@@ -11,7 +11,10 @@
 defined('_JEXEC') or die;
 
 ?>
+<style type="text/css">
+.k2AccountPage div.k2ProfileHeading {text-align:right;font-size:18px;padding:8px;background:#f6f6f6;/*border-bottom:1px solid #e9e9e9;*/}
 
+</style>
 <!-- K2 user profile form -->
 <form action="<?php echo JURI::root(true); ?>/index.php" enctype="multipart/form-data" method="post" name="userform" autocomplete="off" class="form-validate">
 	<?php if($this->params->def('show_page_title',1)): ?>
@@ -20,10 +23,10 @@ defined('_JEXEC') or die;
 	</div>
 	<?php endif; ?>
 	<div id="k2Container" class="k2AccountPage">
+		<div class="k2ProfileHeading">					<?php echo JText::_('K2_ACCOUNT_DETAILS'); ?></div>
 		<table class="admintable" cellpadding="0" cellspacing="0">
 			<tr>
-				<th colspan="2" class="k2ProfileHeading">
-					<?php echo JText::_('K2_ACCOUNT_DETAILS'); ?>
+				<th colspan="2" class="k2ProfileHeading" >
 				</th>
 			</tr>
 			<tr>
@@ -78,27 +81,28 @@ defined('_JEXEC') or die;
 				</td>
 			</tr>
 			<tr>
-				<th colspan="2" class="k2ProfileHeading">
+				<!-- <th colspan="2" class="k2ProfileHeading">
 					<?php echo JText::_('K2_PERSONAL_DETAILS'); ?>
-				</th>
+				</th> -->
 			</tr>
 			<!-- K2 attached fields -->
 			<tr>
+				<td align='right'>
+					<?php echo $this->lists['gender']; ?>
+				</td>
 				<td class="key">
 					<label id="gendermsg" for="gender"><?php echo JText::_('K2_GENDER'); ?></label>
 				</td>
-				<td>
-					<?php echo $this->lists['gender']; ?>
-				</td>
+				
 			</tr>
-			<tr>
+			<!-- <tr>
 				<td class="key">
 					<label id="descriptionmsg" for="description"><?php echo JText::_('K2_DESCRIPTION'); ?></label>
 				</td>
 				<td>
 					<?php echo $this->editor; ?>
 				</td>
-			</tr>
+			</tr> -->
 			<tr>
 				<td class="key">
 					<label id="imagemsg" for="image"><?php echo JText::_( 'K2_USER_IMAGE_AVATAR' ); ?></label>
@@ -112,55 +116,55 @@ defined('_JEXEC') or die;
 					<?php endif; ?>
 				</td>
 			</tr>
-			<tr>
+<!-- 			<tr>
 				<td class="key">
 					<label id="urlmsg" for="url"><?php echo JText::_('K2_URL'); ?></label>
 				</td>
 				<td>
 					<input type="text" size="50" value="<?php echo $this->K2User->url; ?>" name="url" id="url"/>
 				</td>
-			</tr>
-			<?php if(count(array_filter($this->K2Plugins))): ?>
+			</tr> -->
+			<?php //if(count(array_filter($this->K2Plugins))): ?>
 			<!-- K2 Plugin attached fields -->
-			<tr>
+<!-- 			<tr>
 				<th colspan="2" class="k2ProfileHeading">
-					<?php echo JText::_('K2_ADDITIONAL_DETAILS'); ?>
-				</th>
-			</tr>
-			<?php foreach($this->K2Plugins as $K2Plugin): ?>
-			<?php if(!is_null($K2Plugin)): ?>
-			<tr>
-				<td colspan="2">
-					<?php echo $K2Plugin->fields; ?>
+					<?php //echo JText::_('K2_ADDITIONAL_DETAILS'); ?>
+				</th> -->
+<!-- 			</tr>
+			<?php //foreach($this->K2Plugins as $K2Plugin): ?>
+			<?php //if(!is_null($K2Plugin)): ?>
+			<tr> -->
+<!-- 				<td colspan="2">
+					<?php //echo $K2Plugin->fields; ?>
 				</td>
 			</tr>
-			<?php endif; ?>
-			<?php endforeach; ?>
-			<?php endif; ?>
-			<?php if(isset($this->params) && version_compare(JVERSION, '1.6', 'lt')): ?>
+			<?php //endif; ?>
+			<?php //endforeach; ?>
+			<?php //endif; ?> -->
+<!-- 			<?php //if(isset($this->params) && version_compare(JVERSION, '1.6', 'lt')): ?>
 			<tr>
 				<th colspan="2" class="k2ProfileHeading">
-					<?php echo JText::_('K2_ADMINISTRATIVE_DETAILS'); ?>
+					<?php //echo JText::_('K2_ADMINISTRATIVE_DETAILS'); ?>
 				</th>
 			</tr>
 			<tr>
 				<td colspan="2" id="userAdminParams">
-					<?php echo $this->params->render('params'); ?>
+					<?php //echo $this->params->render('params'); ?>
 				</td>
-			</tr>
-			<?php endif; ?>
+			</tr> -->
+			<?php //endif; ?>
 			<!-- Joomla! 1.6+ JForm implementation -->
 			<?php if(isset($this->form)): ?>
 			<?php foreach ($this->form->getFieldsets() as $fieldset): // Iterate through the form fieldsets and display each one.?>
-				<?php if($fieldset->name != 'core'): ?>
+				<?php if( $fieldset->name == 'profile'): ?>
 				<?php $fields = $this->form->getFieldset($fieldset->name);?>
 				<?php if (count($fields)):?>
 					<?php if (isset($fieldset->label)):// If the fieldset has a label set, display it as the legend.?>
-					<tr>
+<!-- 					<tr>
 						<th colspan="2" class="k2ProfileHeading">
 							<?php echo JText::_($fieldset->label);?>
 						</th>
-					</tr>
+					</tr> -->
 					<?php endif;?>
 					<?php foreach($fields as $field):// Iterate through the fields in the set and display them.?>
 						<?php if ($field->hidden):// If the field is hidden, just display the input.?>

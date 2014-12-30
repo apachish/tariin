@@ -723,7 +723,7 @@ img.k2AccountPageImage {border:4px solid #ddd;margin:10px 0;padding:0;display:bl
 .k2AccountPage div.k2AccountPageNotice {padding:8px;}
 .k2AccountPage div.k2AccountPageUpdate {border-top:1px dotted #ccc;margin:8px 0;padding:8px;text-align:right;}
 
-.k2AccountPage th.k2ProfileHeading {text-align:left;font-size:18px;padding:8px;background:#f6f6f6;/*border-bottom:1px solid #e9e9e9;*/}
+.k2AccountPage th.k2ProfileHeading {text-align:right;font-size:18px;padding:8px;background:#f6f6f6;/*border-bottom:1px solid #e9e9e9;*/}
 .k2AccountPage td#userAdminParams {padding:0;margin:0;}
 .k2AccountPage table.admintable td.key,
 .k2AccountPage table.admintable td.paramlist_key {background:#f6f6f6;border-bottom:1px solid #e9e9e9;border-right:1px solid #e9e9e9;color:#666;font-weight:bold;text-align:right;font-size:11px;width:140px;}

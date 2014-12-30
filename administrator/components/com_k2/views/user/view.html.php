@@ -42,6 +42,7 @@ class K2ViewUser extends K2View
         $lists = array();
         $genderOptions[] = JHTML::_('select.option', 'm', JText::_('K2_MALE'));
         $genderOptions[] = JHTML::_('select.option', 'f', JText::_('K2_FEMALE'));
+        $genderOptions[] = JHTML::_('select.option', 'c', JText::_('K2_COMPANY'));
         $lists['gender'] = JHTML::_('select.radiolist', $genderOptions, 'gender', '', 'value', 'text', $user->gender);
 
         $userGroupOptions = $model->getUserGroups();
