@@ -29,12 +29,7 @@
                     <?php foreach($list['group'][$key] as $ke=>$gr){ ?>
                         <?php if(in_array($gr['id'],$permitiongroup)){?>
                         <li><span class="folder"><?php echo $gr['title'];?></span>
-<!--                            --><?php //if($list['group'][$key][$ke]){?>
-                                <ul>
-                                    <?php foreach($list['user'][$key][$ke] as $name){?>
-                                        <li><span class="file"><?php echo $name['first'].' '.$name['last'];?></span></li>
-                                    <?php }?>
-                                </ul>
+
 <!--                            --><?php //}?>
                         </li>
                     <?php }?>
