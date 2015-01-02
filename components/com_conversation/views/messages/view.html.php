@@ -262,4 +262,18 @@ public function access_text(){
         $access_gr=explode(',',$access_gr);
         return $access_gr;
     }
+    public function get_image($id){
+        $db = JFactory::getDBO();
+        if($id){
+            $qury="SELECT * FROM #__k2_users where userID=".$id;
+        $db->setQuery($qury);
+        $group=$db->loadObject();
+        $image_user=$group->image;
+        $url_image='media/k2/users/'.$image_user;
+        return $url_image;
+    }else{
+        return false;
+    }
+        
+    }
 }

@@ -222,15 +222,16 @@ function gregorianToJalali(g_y, g_m, g_d)
             var last = msg.type; //color
             var user = msg.user; //color
             var usernow='<?php echo $user->id;?>';
+            var img='<?php echo $im=($this->get_image($user->id)?$this->get_image($user->id):'components/com_conversation/assets/img/avatars/1.jpg')?>';
             if(last){
                 opt='<li class="message-single">';
                 opt+='<div class="avatar-container">';
-                opt+='<img src="components/com_conversation/assets/img/avatars/1.jpg">';
+                opt+='<img src="'+img+'">';
                 opt+='</div>';
                 opt+='<div class="message-container">';
                 opt+='<div class="message-text">';
                 opt+='<p class="time_message" class="time_message"><?php
-                            echo $user->name;
+                            //echo $user->name;
                             ?></p><p>';
                 opt+=message;
                 opt+='</p><p align="left"><?php  echo '<span>  '.date("H:i").'</span>'; ?></p></div>';
@@ -249,12 +250,13 @@ function gregorianToJalali(g_y, g_m, g_d)
                 opt+=' last_ul'+groups+'">';
                 opt+='<li class="message-single message-first">';
                 opt+='<div class="avatar-container">';
-                opt+='<img src="components/com_conversation/assets/img/avatars/1.jpg">';
+
+                opt+='<img src="'+img+'">';
                 opt+='</div>';
                 opt+='<div class="message-container">';
                 opt+='<div class="message-text">';
                 opt+='<p class="time_message"><?php
-                            echo $user->name;
+                            //echo $user->name;
 
                             ?></p><p>';
                 opt+=message;
@@ -592,16 +594,14 @@ foreach($user->groups as $grops){
                         <?php }?>
                         <li class="message-single <?php if(!$i){?>message-first<?php }?>">
                             <div class="avatar-container">
-                                <img src="components/com_conversation/assets/img/avatars/1.jpg">
+                                <?php 
+                                $url_image=($this->get_image($user->id)?$this->get_image($user->id):'components/com_conversation/assets/img/avatars/1.jpg')?>
+                                <img src="<?php echo $url_image; ?>">
                             </div>
                             <div class="message-container">
                                 <div class="message-text" >
                                     <?php
                                     echo '<p class="time_message">';
-
-                                    $userr =& JFactory::getUser($message->sender);
-                                    echo $userr->name;
-
                                         echo '</p>';
                                      echo '<p>'.$message->message.'</p>';
                                             echo '<p class="time_message" align="left"><span>  '.$time=substr($message->create_time,10,6).'</span></p>';
@@ -637,14 +637,15 @@ foreach($user->groups as $grops){
                                 <?php }?>
                                 <li class="message-single <?php if(!$i){?>message-first<?php }?>">
                                     <div class="avatar-container">
-                                        <img src="components/com_conversation/assets/img/avatars/1.jpg">
-                                    </div>
+ <?php 
+                            $userr =& JFactory::getUser($message->sender);
+                                $url_image=($this->get_image($userr->id)?$this->get_image($userr->id):'components/com_conversation/assets/img/avatars/1.jpg')?>
+                                <img src="<?php echo $url_image; ?>">                                    </div>
                                     <div class="message-container">
                                         <div class="message-text" >
                                             <?php
                                             echo '<p class="time_message">';
 
-                                            $userr =& JFactory::getUser($message->sender);
                                             echo $userr->name;
 
                                             echo '</p>';
