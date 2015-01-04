@@ -220,6 +220,14 @@ history.go(-1);
 
 
 
+            }else{
+                $uu=implode(',',$access_grup);
+                                if($uu){  $sql2 = "INSERT INTO ".$db->quoteName('#__groupaccess')." SET
+".$db->quoteName('group_id')."        = ".$db->quote($uu).",
+".$db->quoteName('user_id')."         = ".$db->quote($user_id)."
+";
+                                    $db->setQuery($sql2);
+                                    $db->query();}
             }
 
         }
