@@ -23,46 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="default.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/com_adduserfrontend/views/customer/tmpl/default.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="153" column="105" selection-start="4100" selection-end="4140" vertical-scroll-proportion="0.0" vertical-offset="2295" max-vertical-offset="3120">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="default.php" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="default.php" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/components/com_adduserfrontend/views/adduserfrontend/tmpl/default.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="821" column="32" selection-start="37642" selection-end="37642" vertical-scroll-proportion="-0.0" vertical-offset="12315" max-vertical-offset="14535">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.php" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/shaper_financial_news/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="31" selection-start="1594" selection-end="1605" vertical-scroll-proportion="0.5" vertical-offset="291" max-vertical-offset="1485">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="view.html.php" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/components/com_adduserfrontend/views/adduserfrontend/view.html.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="19" selection-start="790" selection-end="806" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="555">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fa-IR.com_adduserfrontend.ini" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/language/fa-IR/fa-IR.com_adduserfrontend.ini">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="0" selection-start="1292" selection-end="1300" vertical-scroll-proportion="0.0" vertical-offset="465" max-vertical-offset="750">
+            <state line="577" column="31" selection-start="30102" selection-end="30102" vertical-scroll-proportion="0.9134438" vertical-offset="8159" max-vertical-offset="13620">
               <folding />
             </state>
           </provider>
@@ -119,7 +83,6 @@
         <option value="$PROJECT_DIR$/administrator/components/com_smsing/views/messages/view.html.php" />
         <option value="$PROJECT_DIR$/administrator/components/com_smsing/views/messages/tmpl/default.php" />
         <option value="$PROJECT_DIR$/components/com_smsing/models/message.php" />
-        <option value="$PROJECT_DIR$/templates/shaper_financial_news/index.php" />
         <option value="$PROJECT_DIR$/templates/protostar/index.php" />
         <option value="$PROJECT_DIR$/components/com_conversation/views/messages/tmpl/default.php" />
         <option value="$PROJECT_DIR$/components/com_adduserfrontend/models/customer.php" />
@@ -128,6 +91,7 @@
         <option value="$PROJECT_DIR$/components/com_adduserfrontend/views/customer/tmpl/default.php" />
         <option value="$PROJECT_DIR$/components/com_adduserfrontend/views/adduserfrontend/view.html.php" />
         <option value="$PROJECT_DIR$/language/fa-IR/fa-IR.com_adduserfrontend.ini" />
+        <option value="$PROJECT_DIR$/templates/shaper_financial_news/index.php" />
         <option value="$PROJECT_DIR$/components/com_adduserfrontend/views/adduserfrontend/tmpl/default.php" />
       </list>
     </option>
@@ -135,7 +99,7 @@
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
     <option name="x" value="-1" />
-    <option name="y" value="27" />
+    <option name="y" value="283" />
     <option name="width" value="1368" />
     <option name="height" value="742" />
   </component>
@@ -165,6 +129,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -381,7 +346,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -443,16 +407,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="27" width="1368" height="742" extended-state="6" />
+    <frame x="-1" y="283" width="1368" height="742" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.44479495" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2510981" sideWeight="0.4992343" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2510981" sideWeight="0.4992343" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24963397" sideWeight="0.5007657" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -461,9 +424,10 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.44479495" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -717,35 +681,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/language/fa-IR/fa-IR.com_adduserfrontend.ini">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="0" selection-start="1292" selection-end="1300" vertical-scroll-proportion="0.0" vertical-offset="79" max-vertical-offset="720">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/com_adduserfrontend/views/adduserfrontend/view.html.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="19" selection-start="790" selection-end="806" vertical-scroll-proportion="0.0" vertical-offset="390" max-vertical-offset="555">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/com_adduserfrontend/views/customer/tmpl/default.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="153" column="105" selection-start="4100" selection-end="4140" vertical-scroll-proportion="0.0" vertical-offset="2295" max-vertical-offset="3120">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/components/com_adduserfrontend/views/adduserfrontend/tmpl/default.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="821" column="32" selection-start="37642" selection-end="37642" vertical-scroll-proportion="0.0" vertical-offset="12315" max-vertical-offset="14535">
+        <state line="31" column="0" selection-start="1235" selection-end="1235" vertical-scroll-proportion="0.50576603" vertical-offset="158" max-vertical-offset="765">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/shaper_financial_news/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="31" selection-start="1594" selection-end="1605" vertical-scroll-proportion="0.5" vertical-offset="291" max-vertical-offset="1485">
+        <state line="38" column="19" selection-start="1544" selection-end="1544" vertical-scroll-proportion="-0.28947368" vertical-offset="570" max-vertical-offset="1455">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/com_adduserfrontend/views/adduserfrontend/view.html.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="19" selection-start="790" selection-end="806" vertical-scroll-proportion="0.30874786" vertical-offset="0" max-vertical-offset="583">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/com_adduserfrontend/views/customer/tmpl/default.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="151" column="61" selection-start="3961" selection-end="3961" vertical-scroll-proportion="0.0" vertical-offset="2265" max-vertical-offset="3090">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/components/com_adduserfrontend/views/adduserfrontend/tmpl/default.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="577" column="31" selection-start="30102" selection-end="30102" vertical-scroll-proportion="0.9134438" vertical-offset="8159" max-vertical-offset="13620">
           <folding />
         </state>
       </provider>

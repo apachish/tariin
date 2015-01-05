@@ -22,20 +22,20 @@ $namemode = $params->get( 'namemode', 0);
 // Check if the group is chosen from frontend or backend
 $usertypemode = $params->get( 'usertypemode', 0);
 if($usertypemode == '0'){
-$setusertype = $params->get( 'setusertype', 2);
-$hiddenusertype = "0"; // Initialize
-} else {
-$setusertype = "FRONTEND";
-$hiddenusertype = $params->get( 'hiddenusertype', 1);
+    $setusertype = $params->get( 'setusertype', 2);
+    $hiddenusertype = "0"; // Initialize
+}else {
+    $setusertype = "FRONTEND";
+    $hiddenusertype = $params->get( 'hiddenusertype', 1);
 }
 // END - Check if the group is chosen from frontend or backend
 $notificationemail = $params->get( 'notificationemail', 0);
 $adminnotificationemail = $params->get( 'adminnotificationemail', 0);
 $usernamemode = $params->get( 'usernamemode', 0 );
 if($usernamemode !== '1'){
-$unameexist = '0';
-} else {
-$unameexist = $params->get( 'unameexist', 0);
+    $unameexist = '0';
+}else {
+    $unameexist = $params->get( 'unameexist', 0);
 }
 // Get fieldsettings
 $emailexist = $params->get( 'emailexist', 1);
@@ -47,94 +47,93 @@ function permistionlevel(){
     $user = JFactory::getUser();
 
     $query_group="SELECT * FROM #__usergroups where parent_id = 2 and id IN (select group_id from #__user_usergroup_map where user_id=".$user->id.")";
-$db->setQuery($query_group);
-$group=$db->loadObjectlist();
-if($group){
-$query_group="SELECT id FROM #__usergroups ";
-    $query_group.=" where ";
-    $size=sizeof($group);
-    $i=1;
-    foreach($group as $gr){
-        if($i<$size)
-            $query_group.= "parent_id =".$gr->id." OR ";
-        else
-            $query_group.= "parent_id =".$gr->id."  ";
-        $i++;
+    $db->setQuery($query_group);
+    $group=$db->loadObjectlist();
+    if($group){
+        $query_group="SELECT id FROM #__usergroups ";
+        $query_group.=" where ";
+        $size=sizeof($group);
+        $i=1;
+        foreach($group as $gr){
+            if($i<$size)
+                $query_group.= "parent_id =".$gr->id." OR ";
+            else
+                $query_group.= "parent_id =".$gr->id."  ";
+            $i++;
+        }
+        $query_group.="and id IN (select group_id from #__user_usergroup_map where user_id=".$user->id.")";
     }
-    $query_group.="and id IN (select group_id from #__user_usergroup_map where user_id=".$user->id.")";
-}
-$db->setQuery($query_group);
-$group_list=$db->loadAssocList();
-$i=0;
-foreach($group_list as $list){
-    $gr_list[$i++]=$list['id'];
-}
-return $gr_list;
+    $db->setQuery($query_group);
+    $group_list=$db->loadAssocList();
+    $i=0;
+    foreach($group_list as $list){
+        $gr_list[$i++]=$list['id'];
+    }
+    return $gr_list;
 }
 //end
 // Get parent_id of usergroup
 function get_parent_id($id)
 {
-
-// Get DB acces
-$db =& JFactory::getDBO();
-// Get the parent id of a custom usergroup
-$query = "SELECT parent_id FROM #__usergroups WHERE id = '$id' order by parent_id DESC";
-$db->setQuery($query); // Set query
-$result = $db->loadResult(); // Load result
-return $result;
+    // Get DB acces
+    $db =& JFactory::getDBO();
+    // Get the parent id of a custom usergroup
+    $query = "SELECT parent_id FROM #__usergroups WHERE id = '$id' order by parent_id DESC";
+    $db->setQuery($query); // Set query
+    $result = $db->loadResult(); // Load result
+    return $result;
 }
 // End -  Get the parent id
 // Make addition to username if username exists
 function MakeAddition($fusername) {
-// Get DB acces
-$db =& JFactory::getDBO();
-// Going into a loop
-$finished = false;  // We're not finished loop yet (we just started the loop)
-$i = 1; // Counting
-while(!$finished) {                          // While not finished
-$sql = "SELECT COUNT(*) ".$db->quoteName('username')." FROM ".$db->quoteName('#__users')." WHERE ".$db->quoteName('username')." = ".$db->quote($fusername.$i).""; // Check in DB if the alternative username doesnt exist
-$db->setQuery($sql);
-$num_rows_add = $db->loadResult();
-if ($num_rows_add == "0") {        // If username DOES NOT exist...
-$finished = true;                    // We are finished stop loop
-}
-$i++;
-}
-return $i-1;
+    // Get DB acces
+    $db =& JFactory::getDBO();
+    // Going into a loop
+    $finished = false;  // We're not finished loop yet (we just started the loop)
+    $i = 1; // Counting
+    while(!$finished) {                          // While not finished
+        $sql = "SELECT COUNT(*) ".$db->quoteName('username')." FROM ".$db->quoteName('#__users')." WHERE ".$db->quoteName('username')." = ".$db->quote($fusername.$i).""; // Check in DB if the alternative username doesnt exist
+        $db->setQuery($sql);
+        $num_rows_add = $db->loadResult();
+        if ($num_rows_add == "0") {        // If username DOES NOT exist...
+            $finished = true;                    // We are finished stop loop
+        }
+        $i++;
+    }
+    return $i-1;
 }
 // END - Make addition to username if username exists
 // Clean special chars
 function clean_now($text)
 {
-$text=strtolower($text);
-$code_entities_match = array(' ','--','&quot;','!','@','#','$','%','^','&','*','(',')','_','+','{','}','|',':','"','<','>','?','[',']','\\',';',"'",',','/','*','+','~','`','=');
-$code_entities_replace = array('-','-','','','','','','','','','','','','','','','','','','','','','','','');
-$text = str_replace($code_entities_match, $code_entities_replace, $text);
-return $text;
+    $text=strtolower($text);
+    $code_entities_match = array(' ','--','&quot;','!','@','#','$','%','^','&','*','(',')','_','+','{','}','|',':','"','<','>','?','[',']','\\',';',"'",',','/','*','+','~','`','=');
+    $code_entities_replace = array('-','-','','','','','','','','','','','','','','','','','','','','','','','');
+    $text = str_replace($code_entities_match, $code_entities_replace, $text);
+    return $text;
 }
 // End clean special chars
 // Function to create a random password
 function createRandomPassword() {
-$chars = "abcdefghijkmnopqrstuvwxyz0123456789";
-srand((double)microtime()*1000000);
-$i = 0;
-$pass = '' ;
-while ($i < 10) {
-$num = rand() % 33;
-$tmp = substr($chars, $num, 1);
-$pass = $pass . $tmp;
-$i++;
-}
-return $pass;
+    $chars = "abcdefghijkmnopqrstuvwxyz0123456789";
+    srand((double)microtime()*1000000);
+    $i = 0;
+    $pass = '' ;
+    while ($i < 10) {
+        $num = rand() % 33;
+        $tmp = substr($chars, $num, 1);
+        $pass = $pass . $tmp;
+        $i++;
+    }
+    return $pass;
 } // End - Function to create a random password
 // Encrypt password for Joomla
 function getCryptedPassword($plaintext, $salt = '', $encryption = 'md5-hex', $show_encrypt = false)
 {
-// Get the salt to use.
-$salt = JUserHelper::getSalt($encryption, $salt, $plaintext);
-$encrypted = ($salt) ? md5($plaintext.$salt) : md5($plaintext);
-return ($show_encrypt) ? '{MD5}'.$encrypted : $encrypted;
+    // Get the salt to use.
+    $salt = JUserHelper::getSalt($encryption, $salt, $plaintext);
+    $encrypted = ($salt) ? md5($plaintext.$salt) : md5($plaintext);
+    return ($show_encrypt) ? '{MD5}'.$encrypted : $encrypted;
 } // END - getCryptedPassword
 // Get user and Groupid
 $user   = &JFactory::getUser();
@@ -148,18 +147,18 @@ $custumgroupparentidsstring = ""; // Initialize variable
 $user = JFactory::getUser(); // get user data
 $usergroups = $user->getAuthorisedGroups(); // get all usergroups for this user
 foreach ($usergroups as $usergroup) { // For each usergroup do something
-if($usergroup > "9") { // If the usergroup ID is higher then 9 and therefore is a custum usergroup
-// Get the parent id of this custum usergroup
-$result = get_parent_id($usergroup);
-// If the resulting parent_id is also a custom usergroup
-while($result > 9) { // Loop to get parent_id untill we find a parent id of the standard joomla usergroups
-$result = get_parent_id($result);
-}
-// Put results in comma seperated string
-$custumgroupparentidsstring .= $result.","; // Make comma seperated string out of results
-} else { // Else of: if($usergroup > "9") { - (usergroup is not higher then 9 and therefore is a 'normal' usergroup)
-$normalgroupidsstring .= $usergroup.","; // Make comma seperated string out of results
-}
+    if($usergroup > "9") { // If the usergroup ID is higher then 9 and therefore is a custum usergroup
+        // Get the parent id of this custum usergroup
+        $result = get_parent_id($usergroup);
+        // If the resulting parent_id is also a custom usergroup
+        while($result > 9) { // Loop to get parent_id untill we find a parent id of the standard joomla usergroups
+            $result = get_parent_id($result);
+        }
+        // Put results in comma seperated string
+        $custumgroupparentidsstring .= $result.","; // Make comma seperated string out of results
+    } else { // Else of: if($usergroup > "9") { - (usergroup is not higher then 9 and therefore is a 'normal' usergroup)
+        $normalgroupidsstring .= $usergroup.","; // Make comma seperated string out of results
+    }
 } // END - (foreach ($usergroups as $usergroup) { - For each usergroup do something)
 $custumgroupparentidsstring = substr($custumgroupparentidsstring, 0, -1); // Delete not needed comma's
 $custumgroupparentids = explode(",", $custumgroupparentidsstring); // Explode comma seperated string to array
@@ -175,16 +174,14 @@ $groupid = $highestgroup;
 // Handle form
 if(isset($_POST['import'])) {
     // User helper
-
     if(!$_POST['group'] & $_POST['id_user']){
         echo '<script language="JavaScript">
-alert ("'.JText::_("NO_GROUP").'")
-history.go(-1);
-</script>';
+                alert ("'.JText::_("NO_GROUP").'")
+                history.go(-1);
+                </script>';
         return 0;
     }elseif($_POST['id_user']){
         $per=permistionlevel();
-
         if($per){
             foreach($per as $ac_gr){
                 if(!in_array($ac_gr,$_POST['group'])){
@@ -194,11 +191,25 @@ history.go(-1);
 
                 }
             }
+            foreach($_POST['group'] as $ut){
+                                     $sql_sh = "SELECT * FROM ".$db->quoteName('#__user_usergroup_map')."
+                                     WHERE ".$db->quoteName('group_id')." = ".$db->quote($ut)." and
+                                     ".$db->quoteName('user_id')." = ".$db->quote($_POST['id_user'])." ";
+                                    $db->setQuery($sql_sh);
+                                    $num_rows_sh = $db->loadResult();
+                                    if(!$num_rows_sh){
+                                        $sql2 = "INSERT INTO ".$db->quoteName('#__user_usergroup_map')." SET
+                                                ".$db->quoteName('group_id')."        = ".$db->quote($ut).",
+                                                ".$db->quoteName('user_id')."         = ".$db->quote($_POST['id_user'])."";
+                                        $db->setQuery($sql2);
+                                        $db->query();
+                                    }
+            }
             $query_select_ac="select * from #__groupaccess where user_id=".$_POST['id_user'];
             $db->setQuery($query_select_ac);
-            $num_rows_groupac = $db->loadResult();
+             $num_rows_groupac = $db->loadResult();
             if($num_rows_groupac){
-                $access_grup=$_POST['access'];
+                $access_grup=$_POST['access'];var_dump($access_grup);
                 if($access_grup){
                     foreach($access_grup as $k=>$a_g){
                         if(!in_array($a_g,$_POST['group'])){
@@ -206,7 +217,7 @@ history.go(-1);
 
                         }
                     }
-                    $uu=implode(',',$access_grup);
+                     $uu=implode(',',$access_grup);
                     if($uu){
                         $sql2 = "UPDATE #__groupaccess SET  group_id= '".$uu."' WHERE user_id=".$_POST['id_user'] ;
                         $db->setQuery($sql2);
@@ -217,23 +228,26 @@ history.go(-1);
                     $db->setQuery($sql2);
                     $db->query();
                 }
-
-
-
             }else{
+                $access_grup=$_POST['access'];
+                foreach($access_grup as $k=>$a_g){
+                    if(!in_array($a_g,$_POST['group'])){
+                        unset($access_grup[$k]);
+                    }
+                }
                 $uu=implode(',',$access_grup);
-                                if($uu){  $sql2 = "INSERT INTO ".$db->quoteName('#__groupaccess')." SET
-".$db->quoteName('group_id')."        = ".$db->quote($uu).",
-".$db->quoteName('user_id')."         = ".$db->quote($user_id)."
-";
+                if($uu){  
+                    $sql2 = "INSERT INTO ".$db->quoteName('#__groupaccess')." SET
+                            ".$db->quoteName('group_id')." = ".$db->quote($uu).",
+                            ".$db->quoteName('user_id')." = ".$db->quote($_POST['id_user'])."";
                                     $db->setQuery($sql2);
-                                    $db->query();}
+                                    $db->query();
+                }
             }
 
         }
     }
     jimport( 'joomla.user.helper' );
-
         if($passwordmode == 0){
             $createpassword = createRandomPassword();
             $password = getCryptedPassword($createpassword, $salt= '', $encryption= 'md5-hex', $show_encrypt=false);
@@ -331,45 +345,6 @@ history.go(-1);
                 }
             }
         }
-        // END - Check if the usertype ID that is provided in the settings is an existing usergroup
-        //if($setusertype == "2"){
-        //$usertype = '2';
-        //$usertypename = 'Registered';
-        //}
-        //if($setusertype == "3"){
-        //$usertype = '3';
-        //$usertypename = 'Author';
-        //}
-        //if($setusertype == "4"){
-        //$usertype = '4';
-        //$usertypename = 'Editor';
-        //}
-        //if($setusertype == "5"){
-        //$usertype = '5';
-        //$usertypename = 'Publisher';
-        //}
-        //if($setusertype == "6"){
-        //$usertype = '6';
-//$usertypename = 'Manager';
-//}
-//if($setusertype == "7"){
-//$usertype = '7';
-//$usertypename = 'Administrator';
-//}
-//// Custum usergroup
-//if($setusertype == "100"){
-//$custumgroup = $params->get( 'custumgroup' );
-//$usertype = $custumgroup;
-//// Check if the usertype ID that is provided in the settings is an existing usergroup
-//$query = "SELECT ".$db->quoteName('title')." FROM ".$db->quoteName('#__usergroups')." WHERE id = ".$db->quote($usertype)."";
-//$db->setQuery($query);
-//$usertypename = $db->loadResult();
-//if($usertypename == ""){
-//echo '<p><font color="red">The group-<b>ID</b> you provided in your settings doesnt exist in the #__usergroups table! Fix this in your settings.</font></p>';
-//}
-//}
-// End - Get usertype from config
-// Check if username exists
         $per_u=permistionlevel();
         $user_gg=implode(',',$per_u);
         $sql = "SELECT ".$db->quoteName('id').", ".$db->quoteName('username')." FROM ".$db->quoteName('#__users')." WHERE ".$db->quoteName('username')." = ".$db->quote($username)." ";
@@ -381,9 +356,7 @@ history.go(-1);
             $usernameexists = "0";
         } else {
             if ($unameexist == "0") {
-//$username = $username.$addition;
                 $usernameline = "" . JText::_('THEUSERNAME') . " <strong>" . $username1 . "</strong> " . JText::_('USERCHANGENAME') . " <strong>" . $username . "</strong><br>";
-//echo $usernameline;
                 $usernameexists = "0";
                 $per_u=permistionlevel();
                 $user_gg=implode(',',$per_u);
@@ -397,20 +370,19 @@ history.go(-1);
 
             }
         }
-// Create generic emailadress (faking an emailadress)
+        // Create generic emailadress (faking an emailadress)
         if( $genericemail == "1" ) {
-// Get Domain
+        // Get Domain
             $domain = $_SERVER['HTTP_HOST'];
             $domain = str_replace ("www.", "", $domain);
-// Make generic email
+        // Make generic email
             $email = $username . '@' . $domain;
             $emaildoesexist = "0";  // We dont want a double email check when using this option
         } else {
             $email = trim($_POST['email']);
         }
-// Check if email exists
+        // Check if email exists
         if ($emailexist == "1") {
-
             $sql = "SELECT COUNT(*) ".$db->quoteName('email')." FROM ".$db->quoteName('#__users')." WHERE ".$db->quoteName('email')." = ".$db->quote($email)." ";
             $db->setQuery($sql);
             $num_rows = $db->loadResult();
@@ -431,7 +403,7 @@ history.go(-1);
             $emaildoesexist = "0"; // This email already exists in the  user db but we dont check for double mails so we let it pass
         }
 
-// Save data in cookies if we are sending back the user to the form because of double username or email
+        // Save data in cookies if we are sending back the user to the form because of double username or email
         if($usernameexists == "1" || $emaildoesexist == "1") {
             if($namemode == "1"){
                 setcookie("firstname", $firstname, time()+30);
@@ -453,51 +425,48 @@ history.go(-1);
             setcookie("group", $gr, time()+30);
         if($emaildoesexist == "1") { // Email exists - Send message to user and then send user back to the form
             echo '<script language="JavaScript">
-alert ("'.JText::_("EMAILEXISTS").'")
-history.go(-1);
-</script>';
+                    alert ("'.JText::_("EMAILEXISTS").'")
+                    history.go(-1);
+                    </script>';
         } else {
             if($usernameexists == "1") { // Username exists and automatic renaming is off - Send message to user and then send user back to the form
-//echo '<script language="JavaScript">
-//alert ("'.JText::_("USERNAMEEXISTS").'")
-//history.go(-1);
-//</script>';
+                //echo '<script language="JavaScript">
+                //alert ("'.JText::_("USERNAMEEXISTS").'")
+                //history.go(-1);
+                //</script>';
             } else {
-// When javascript is turned off there is no input field validation //
+                // When javascript is turned off there is no input field validation //
 
                 if($name == "" || $email == "" || $username == "" || $showpass == "") {
-// Message when $name, $email, $username or $showpass are empty //
+                // Message when $name, $email, $username or $showpass are empty //
                     echo JText::_("SPAMBOT");
-// Check if the group ID of the user which is added is not bigger or equal to the groupid of the user who is adding the new user.
+                // Check if the group ID of the user which is added is not bigger or equal to the groupid of the user who is adding the new user.
                 }
                 else if (($hiddenusertype == "1")&&($group < "9")&&($group != "") || (2 >= $groupid)) {echo JText::_("ERR_GROUP");
-// END - Check if the group ID of the user which is added is not bigger or equal to the groupid of the user who is adding the new user.
+                // END - Check if the group ID of the user which is added is not bigger or equal to the groupid of the user who is adding the new user.
                 } else {
                     if($groupid > 2) { // If at least an author
-// Some data for the query
+                        // Some data for the query
                         $block = '0';
                         $sendmail = '0';
-// Insert record into users
-//    echo $usernameexists;exit;
+                        // Insert record into users
+                        //    echo $usernameexists;exit;
                         if(!$usernameexists) {
                             if($usernameexists_A!=2){
                                 $sql1 = "INSERT INTO ".$db->quoteName('#__users')." SET
-".$db->quoteName('name')."            = ".$db->quote($name).",
-".$db->quoteName('username')."        = ".$db->quote($username).",
-".$db->quoteName('email')."           = ".$db->quote($email).",
-".$db->quoteName('password')."        = ".$db->quote($password).",
-".$db->quoteName('block')."           = ".$db->quote($block).",
-".$db->quoteName('sendEmail')."       = ".$db->quote($sendmail).",
-".$db->quoteName('registerDate')."    = NOW(),
-".$db->quoteName('lastvisitDate')."   = ".$db->quote('0000-00-00 00:00:00').",
-".$db->quoteName('activation')."      = '',
-".$db->quoteName('params')."          = ''
-";
+                                        ".$db->quoteName('name')."            = ".$db->quote($name).",
+                                        ".$db->quoteName('username')."        = ".$db->quote($username).",
+                                        ".$db->quoteName('email')."           = ".$db->quote($email).",
+                                        ".$db->quoteName('password')."        = ".$db->quote($password).",
+                                        ".$db->quoteName('block')."           = ".$db->quote($block).",
+                                        ".$db->quoteName('sendEmail')."       = ".$db->quote($sendmail).",
+                                        ".$db->quoteName('registerDate')."    = NOW(),
+                                        ".$db->quoteName('lastvisitDate')."   = ".$db->quote('0000-00-00 00:00:00').",
+                                        ".$db->quoteName('activation')."      = '',
+                                        ".$db->quoteName('params')."          = ''";
                                 $db->setQuery($sql1);
                                 $db->query();
-// Get back user's ID
                                 $user_id = $db->insertid();
-// Insert record into #__user_usergroup_map
                                 $access_grup=$_POST['access'];
                                 foreach($access_grup as $k=>$a_g){
                                     if(!in_array($a_g,$usertype)){
@@ -508,98 +477,55 @@ history.go(-1);
                                 foreach($usertype as $ut){
 
                                     $sql2 = "INSERT INTO ".$db->quoteName('#__user_usergroup_map')." SET
-".$db->quoteName('group_id')."        = ".$db->quote($ut).",
-".$db->quoteName('user_id')."         = ".$db->quote($user_id)."
-";
+                                            ".$db->quoteName('group_id')." = ".$db->quote($ut).",
+                                            ".$db->quoteName('user_id')." = ".$db->quote($user_id)."";
                                     $db->setQuery($sql2);
-                                    $db->query();}
-
+                                    $db->query();
+                                }
                                 $uu=implode(',',$access_grup);
                                 if($uu){  $sql2 = "INSERT INTO ".$db->quoteName('#__groupaccess')." SET
-".$db->quoteName('group_id')."        = ".$db->quote($uu).",
-".$db->quoteName('user_id')."         = ".$db->quote($user_id)."
-";
+                                                    ".$db->quoteName('group_id')." = ".$db->quote($uu).",
+                                                    ".$db->quoteName('user_id')." = ".$db->quote($user_id)."";
                                     $db->setQuery($sql2);
                                     $db->query();}
-
-
                                 if(!isset($lastname)) { // Initialize variable
                                     $lastname = "";
                                 }
-                            }else{
-                                $access_grup=$_POST['access'];
-                                foreach($access_grup as $k=>$a_g){
-                                    if(!in_array($a_g,$usertype)){
-                                        unset($access_grup[$k]);
-
-                                    }
-                                }
-                                foreach($usertype as $ut){
-                                     $sql_sh = "SELECT * FROM ".$db->quoteName('#__user_usergroup_map')." WHERE ".$db->quoteName('group_id')." = ".$db->quote($ut)." and ".$db->quoteName('user_id')." = ".$db->quote($user_idd)." ";
-                                    $db->setQuery($sql_sh);
-                                    $num_rows_sh = $db->loadResult();
-                                    if(!$num_rows_sh){
-                                        $sql2 = "INSERT INTO ".$db->quoteName('#__user_usergroup_map')." SET
-                            ".$db->quoteName('group_id')."        = ".$db->quote($ut).",
-                            ".$db->quoteName('user_id')."         = ".$db->quote($user_idd)."";
-                                        $db->setQuery($sql2);
-                                        $db->query();
-                                    }
-                                    $uu=implode(',',$access_grup);
-                                    if($uu){
-                                        $sql_access = "SELECT * FROM ".$db->quoteName('#__groupaccess')." WHERE ".$db->quoteName('user_id')." = ".$db->quote($user_idd)." ";
-                                        $db->setQuery( $sql_access);
-                                        $num_rows_access = $db->loadResult();
-                                        if($num_rows_access){
-                                            $groupp=$num_rows_access->group_id;
-                                            $arr_gr=explode(',',$groupp);
-                                            array_push($arr_gr,$uu);
-                                            $arr_gr=implode(',',$arr_gr);
-                                            $sql2 = "UPDATE ".$db->quoteName('#__groupaccess')." SET  ".$db->quoteName('group_id')." = ".$db->quote($arr_gr)." WHERE ".$db->quoteName('user_id')." = ".$db->quote($user_idd)." ";
-                                            $db->setQuery($sql2);
-                                            $db->query();
-                                        }else{
-                                              $sql2 = "INSERT INTO ".$db->quoteName('#__groupaccess')." SET
-                            ".$db->quoteName('group_id')."        = ".$db->quote($uu).",
-                            ".$db->quoteName('user_id')."         = ".$db->quote($user_idd)."";
-                                            $db->setQuery($sql2);
-                                            $db->query();
-                                        }}
-
-                                    }
-
                             }
+                                
+
+                            
                             //insert telephon
                             $query_checktel="select * from ".$db->quoteName('#__user_profiles')." where user_id=".($user_idd?$user_idd:$user_id) ." and profile_key='profile.phone'";
                             $db->setQuery($query_checktel);
                             $num_rows_tel = $db->loadResult();
                             if(!$num_rows_tel){
-                                $query_tel="INSERT INTO ".$db->quoteName('#__user_profiles')." (".$db->quoteName('user_id')." ,".$db->quoteName('profile_key')."
-,".$db->quoteName('profile_value').") VALUES (".($user_idd?$user_idd:$user_id) .",'profile.phone','".$username."')";
+                                $query_tel="INSERT INTO ".$db->quoteName('#__user_profiles')." (".$db->quoteName('user_id')."
+                                            ,".$db->quoteName('profile_key').",".$db->quoteName('profile_value').")
+                                            VALUES (".($user_idd?$user_idd:$user_id) .",'profile.phone','".$username."')";
                                 $db->setQuery($query_tel);
                                 $db->query();
                             }
 
-// Insert record into Community Builder
+                            // Insert record into Community Builder
                             if($operationmode == 1){
                                 $sql3 = "INSERT INTO ".$db->quoteName('#__comprofiler')." SET
-".$db->quoteName('id')."                  = ".$db->quote($user_id).",
-".$db->quoteName('user_id')."             = ".$db->quote($user_id).",
-".$db->quoteName('firstname')."           = ".$db->quote($firstname).",
-".$db->quoteName('lastname')."            = ".$db->quote($lastname).",
-".$db->quoteName('hits')."                = ".$db->quote('0').",
-".$db->quoteName('message_last_sent')."   = ".$db->quote('0000-00-00 00:00:00').",
-".$db->quoteName('message_number_sent')." = ".$db->quote('0').",
-".$db->quoteName('approved')."            = ".$db->quote('1').",
-".$db->quoteName('confirmed')."           = ".$db->quote('1').",
-".$db->quoteName('lastupdatedate')."      = ".$db->quote('0000-00-00 00:00:00').",
-".$db->quoteName('banned')."              = ".$db->quote('0').",
-".$db->quoteName('acceptedterms')."       = ".$db->quote('1')."
-";
+                                        ".$db->quoteName('id')."                  = ".$db->quote($user_id).",
+                                        ".$db->quoteName('user_id')."             = ".$db->quote($user_id).",
+                                        ".$db->quoteName('firstname')."           = ".$db->quote($firstname).",
+                                        ".$db->quoteName('lastname')."            = ".$db->quote($lastname).",
+                                        ".$db->quoteName('hits')."                = ".$db->quote('0').",
+                                        ".$db->quoteName('message_last_sent')."   = ".$db->quote('0000-00-00 00:00:00').",
+                                        ".$db->quoteName('message_number_sent')." = ".$db->quote('0').",
+                                        ".$db->quoteName('approved')."            = ".$db->quote('1').",
+                                        ".$db->quoteName('confirmed')."           = ".$db->quote('1').",
+                                        ".$db->quoteName('lastupdatedate')."      = ".$db->quote('0000-00-00 00:00:00').",
+                                        ".$db->quoteName('banned')."              = ".$db->quote('0').",
+                                        ".$db->quoteName('acceptedterms')."       = ".$db->quote('1')."";
                                 $db->setQuery($sql3);
                                 $db->query();
                             } // End - CB mode or not
-// Get userdata for export (Is used for additional plugins and the onAfterStoreUser function in joomla)
+                            // Get userdata for export (Is used for additional plugins and the onAfterStoreUser function in joomla)
                             $userdataexport = array (
                                 "username" => "$username",
                                 "email" => "$email",
@@ -608,22 +534,22 @@ history.go(-1);
                                 "id" => "$user_id",
                                 "group" => implode(',',$group),
                             );
-// Fire the onAfterStoreUser trigger
+                            // Fire the onAfterStoreUser trigger
                             JPluginHelper::importPlugin('user');
                             $dispatcher =& JDispatcher::getInstance();
                             $dispatcher->trigger('onUserAfterSave', array($userdataexport, true, true, $this->getError()));
-// Start executing additional plugins
-// Fire the onAfterStoreUserAuftoK2 function for K2 synchronization
+                            // Start executing additional plugins
+                            // Fire the onAfterStoreUserAuftoK2 function for K2 synchronization
                             $dispatcher->trigger('onAfterStoreUserAuftoK2', array($userdataexport, true, true, $this->getError()));
-// End executing plugins
-// Flush
+                            // End executing plugins
+                            // Flush
                             flush();
-// Show message to user if CB mode is ON
+                            // Show message to user if CB mode is ON
                             if($operationmode == 1){
                                 echo '<br /><br /><strong>' . JText::_("ADDEDUSERTOJOOMLACB") . '!</strong><br><a href="index.php?option=com_comprofiler&task=userDetails&uid=' . $user_id . '"><strong>' . $username . '</strong></a> ' . JText::_("ADDEDUSERTOJOOMLACBTXT") . '';
 
                             }
-// Show message to user if CB mode is OFF
+                            // Show message to user if CB mode is OFF
                             if($operationmode == 0){
                                 if($this->type=='edit'){
                                     echo '<strong>'.JText::_("USERNAME").':' . $username . '</strong><strong>' . JText::_("EDITEDUSERTOJOOMLA") . '</strong><br>';
@@ -652,24 +578,25 @@ history.go(-1);
                                 $doc->addScriptDeclaration( $scrip );
 
                             }
-// Send notification email to added user
+                              // Send notification email to added user
                             if($notificationemail == "1"){
                                 $mainframe = JFactory::getApplication();
                                 $fromname = $mainframe->getCfg('fromname');
                                 $from = $mainframe->getCfg('mailfrom');
-// Additional headers
+                                // Additional headers
                                 $headers  = 'MIME-Version: 1.0' . "\r\n";
                                 $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
                                 $headers .= 'From: ' . $fromname . '<' . $from . '>' . "\r\n";
                                 $recipient = $email;
                                 $subject = "".JText::_("YOURDETAILFOR")." ".$_SERVER['HTTP_HOST']."";
-                                echo $body   = "".JText::_("YOUHAVEBEENADDED")." http://".$_SERVER['HTTP_HOST']."<br>".JText::_("THISMAILCONT")." http://".$_SERVER['HTTP_HOST']."<br>".JText::_("USERNAME").": ".$username."<br>".JText::_("PASSWORD").": ".$showpass."<br>".JText::_("DONOTRESPOND")."
-";
-// Send notification email now!
+                                echo $body   = "".JText::_("YOUHAVEBEENADDED")." http://".$_SERVER['HTTP_HOST']."<br>"
+                                                .JText::_("THISMAILCONT")." http://".$_SERVER['HTTP_HOST']."<br>".JText::_("USERNAME").": "
+                                                .$username."<br>".JText::_("PASSWORD").": ".$showpass."<br>".JText::_("DONOTRESPOND")."";
+                                // Send notification email now!
                                 mail($recipient, $subject, $body, $headers);
                                 // http://site/conver/index.php?option=com_smsing&view=message&telephon=9372852427&text=salam
                             }
-// Send notification email to admin
+                            // Send notification email to admin
                             if($adminnotificationemail == "1"){
                                 $headers  = 'MIME-Version: 1.0' . "\r\n";
                                 $headers .= 'Content-type: text/html; charset=iso-8859-1' . "\r\n";
@@ -680,10 +607,12 @@ history.go(-1);
                                 $headers .= 'From: ' . $fromname . '<' . $from . '>' . "\r\n";
                                 $recipient = $from;
                                 $subject = "A new user has been added to ".$_SERVER['HTTP_HOST']."";
-                                $body   = "A new user has been added to ".$_SERVER['HTTP_HOST'].". This is a copy off the emailnotification that this user received:<br>".JText::_("YOUHAVEBEENADDED")." http://".$_SERVER['HTTP_HOST']."<br>".JText::_("THISMAILCONT")." http://".$_SERVER['HTTP_HOST']."<br>".JText::_("USERNAME").": ".$username."<br>".JText::_("PASSWORD").": xxx (hidden)<br>".JText::_("DONOTRESPOND")."
-";
-
-// Send notification email now!
+                                $body   = "A new user has been added to ".$_SERVER['HTTP_HOST'].". This is a copy off the emailnotification that this user received:<br>"
+                                    .JText::_("YOUHAVEBEENADDED")." http://".$_SERVER['HTTP_HOST']."<br>"
+                                    .JText::_("THISMAILCONT")." http://".$_SERVER['HTTP_HOST']."<br>"
+                                    .JText::_("USERNAME").": ".$username."<br>"
+                                    .JText::_("PASSWORD").": xxx (hidden)<br>".JText::_("DONOTRESPOND")."";
+                                // Send notification email now!
                                 mail($recipient, $subject, $body, $headers);
                             }
                         } else {  // End at least an author
@@ -695,7 +624,7 @@ history.go(-1);
         }
 
 
-       } else {
+    } else {
 
 if($groupid > 2) { // If at least an author
 
