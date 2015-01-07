@@ -11,7 +11,7 @@ defined('_JEXEC') or die;
 
 ?>
 <link rel="stylesheet" href="templates/protostar/css/colorbox.css" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
 <script src="templates/protostar/js/jquery.colorbox.js"></script>
 <script type="text/javascript">
    jQuery(document).ready(function(){
