@@ -269,7 +269,11 @@ public function access_text(){
         $db->setQuery($qury);
         $group=$db->loadObject();
         $image_user=$group->image;
+        if($image_user){
         $url_image='media/k2/users/'.$image_user;
+        }else{
+            $url_image=null;
+        }
         return $url_image;
     }else{
         return false;
