@@ -13,9 +13,11 @@ defined ('_JEXEC') or die ('resticted aceess');
 $user = JFactory::getUser();
 ?>
 
-<?php /*Login Module*/ if($this->countModules( 'login' )) : ?><!--class="login_link"-->
-	<span style="color:black">|</span><a  href="#login" role="button" data-toggle="modal" style="color:red"><?php echo ($user->id>0) ? JText::_('MY_ACCOUNT') : JText::_('JLOGIN'); ?></a>
-
+<?php /*Login Module*/ if($this->countModules( 'login' )) : 
+$user = JFactory::getUser();
+?><!--class="login_link"-->
+	<span style="color:black">|</span><a  href="#login" role="button" data-toggle="modal" style="color:red"><?php //echo ($user->id>0) ? JText::_('MY_ACCOUNT') : JText::_('JLOGIN'); ?>
+<span style="color:blue"><?php echo JText::sprintf('MOD_LOGIN_HINAME', htmlspecialchars($user->get('name')));?><span></a></span>
 	<div id="login" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 	  <div class="modal-header">
 		<!--<button type="button" class="close" data-dismiss="modal" aria-hidden="true"><i class="icon-remove"></i></button>-->
