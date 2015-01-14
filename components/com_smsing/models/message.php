@@ -177,6 +177,27 @@ class SmsingModelMessage extends JModelItem {
         $table = $this->getTable();
         return $table->delete($id);
     }
+function createRandomPassword() {
+    $chars = "abcdefghijkmnopqrstuvwxyz0123456789";
+    srand((double)microtime()*1000000);
+    $i = 0;
+    $pass = '' ;
+    while ($i < 10) {
+        $num = rand() % 33;
+        $tmp = substr($chars, $num, 1);
+        $pass = $pass . $tmp;
+        $i++;
+    }
+    return $pass;
+} // End - Function to create a random password
+// Encrypt password for Joomla
+function getCryptedPassword($plaintext, $salt = '', $encryption = 'md5-hex', $show_encrypt = false)
+{
+    // Get the salt to use.
+    $salt = JUserHelper::getSalt($encryption, $salt, $plaintext);
+    $encrypted = ($salt) ? md5($plaintext.$salt) : md5($plaintext);
+    return ($show_encrypt) ? '{MD5}'.$encrypted : $encrypted;
+}
     
        public function getsendsms($telephon,$message,$signature,$number_sms){
         $db = JFactory::getDBO();
@@ -188,13 +209,32 @@ class SmsingModelMessage extends JModelItem {
         $Mobiles      = array ($telephon);var_dump($telephon); // all mobile add in this array => support one or more
         $isFlash = false; // falsh sms => open quick in phone and after close message , cleare from phone ;
         mb_internal_encoding("utf-8");
-       $textMessage=$message; // sms text// the text or body for sending
-        $textMessage= $textMessage; // encoding to utf-8
+       
+                if($message=='forget'){
+                    $query="select * from #__users where username='".$Mobiles[0]."'";
+                    $db->setQuery($query);
+                    $db->query();
+                    $result_tel=$db->loadObject();
+                    if($result_tel->id){
+                          $createpassword = $this->createRandomPassword();
+                    $password = $this->getCryptedPassword($createpassword, $salt= '', $encryption= 'md5-hex', $show_encrypt=false);
+                    $showpass = $createpassword;
+                    echo $query="UPDATE #__users SET password='".$password."' WHERE  id=".$result_tel->id;
+                    $db->setQuery($query);
+                    $db->query();
+                   echo  $message="<p>".JText::_("TEXT_SMS_FOR")."</p>%0a<p>".JText::_("USERNAME").":%0a ".$result_tel->username."</p>%0a<p>".JText::_("PASSWORD").": %0a".$showpass."%0a".JText::_("DONOTRESPOND")."</p>";
+
+                    }
+
+                 // encoding to utf-8
+                }
+                   $textMessage=$message; // sms text// the text or body for sending
+        $textMessage= $textMessage; 
         // OR
         //$textMessage=iconv($encoding, 'UTF-8//TRANSLIT', $textMessage); // encoding to utf-8
         // OR
         //$textMessage =  utf8_encode( $str); // encoding to utf-8
-
+if($Mobiles && $message){
       	 $parameters['signature'] = $webServiceSignature;
         $parameters['from' ]= $webServiceNumber;
         $parameters['to' ]  = $Mobiles;
@@ -256,6 +296,6 @@ class SmsingModelMessage extends JModelItem {
         {
             echo $ex->faultstring;
         }
-
+    }
     }
 }

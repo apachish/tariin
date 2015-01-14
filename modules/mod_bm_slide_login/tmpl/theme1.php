@@ -10,9 +10,7 @@
 defined('_JEXEC') or die;
 
 ?>
-<link rel="stylesheet" href="templates/protostar/css/colorbox.css" />
 <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>-->
-<script src="templates/protostar/js/jquery.colorbox.js"></script>
 <script type="text/javascript">
    jQuery(document).ready(function(){
         jQuery( "form" ).submit(function( event ) {
@@ -29,13 +27,19 @@ defined('_JEXEC') or die;
                }
             });
        });
-       jQuery(".iframe").colorbox({
-           iframe:true, width:"80%", height:"80%"
-       });
+        jQuery('.inline').click(function(){
+            jQuery('#div_login').hide();
+            jQuery('#div_forget').show();
+        })
+        jQuery('.go_login').click(function(){
+            jQuery('#div_login').show();
+            jQuery('#div_forget').hide();
+        })
     })
 </script>
 <form action="<?php echo JRoute::_('index.php', true, $params->get('usesecure')); ?>" target="RSS_target"  method="post" id="login-form"  class="form-1">
-	<p class="field">
+	<div id="div_login">
+    <p class="field">
 <!--        <img id="passwd" class="tooltip" title="کیبرد" src="modules/mod_bm_slide_login/assets/images/keyboard.png">
 -->		<input class="keyboard" id="modlgn-username" type="text" name="username" placeholder="<?php echo JText::_('MOD_BM_SLIDE_LOGIN_VALUE_USERNAME') ?>" />
 
@@ -88,6 +92,7 @@ defined('_JEXEC') or die;
 			<button type="submit" tabindex="0" name="Submit" class="btn-submit"><?php echo JText::_('JLOGIN') ?></button>
 		</div>
 	</div>
+    
 	<?php
 		$usersConfig = JComponentHelper::getParams('com_users'); ?>
 		<ul class="unstyled">
@@ -102,7 +107,7 @@ defined('_JEXEC') or die;
 				<?php /*echo JText::_('MOD_BM_SLIDE_LOGIN_FORGOT_YOUR_USERNAME'); */?></a>
 			</li>-->
 			<li>
-                <span class="icon-refresh"></span><a class='iframe' href="<?php echo JRoute::_('index.php?option=com_users&view=reset&Itemid='.UsersHelperRoute::getResetRoute()); ?>">
+                <span class="icon-refresh"></span><a class='inline' href="#inline_content">
 				<?php echo JText::_('MOD_BM_SLIDE_LOGIN_FORGOT_YOUR_PASSWORD'); ?></a>
                 			</li>
 		</ul>
@@ -111,15 +116,42 @@ defined('_JEXEC') or die;
 	<input type="hidden" name="return" value="<?php echo $return; ?>" />
 	<?php echo JHtml::_('form.token'); ?>
     <iframe id="RSS_target" name="RSS_target" src="#" style="width:0;height:0;border:0px solid #fff;"></iframe>
-</form>
-<div style='display:none'>
+</div>
+<div style='display:none' id="div_forget">
     <div id='inline_content' style='padding:10px; background:#fff;'>
-        <p><strong>This content comes from a hidden element on this page.</strong></p>
-        <p>The inline option preserves bound JavaScript events and changes, and it puts the content back where it came from when it is closed.</p>
-        <p><a id="click" href="#" style='padding:5px; background:#ccc;'>Click me, it will be preserved!</a></p>
+        <p class="field">
+            <input class="keyboard" id="modlgn-telephon" type="text" name="telephon" placeholder="<?php echo JText::_('JGLOBAL_TELEPHON') ?>" />
 
-        <p><strong>If you try to open a new Colorbox while it is already open, it will update itself with the new content.</strong></p>
-        <p>Updating Content Example:<br />
-            <a class="ajax" href="../content/ajax.html">Click here to load new content</a></p>
+    </p>
+    <div id="form-login-submit" class="control-group">
+        <div class="controls">
+            <button type="button" tabindex="0" name="send" class="btn-submit send_tel"><?php echo JText::_('SEND') ?></button>
+        </div>
+    </div>
+    <p><?php echo JText::_('TEXT_FORGET') ?></p>
+    <?php
+$scrip="  jQuery(document).ready(function() {
+            jQuery('.send_tel').click(function() {
+                var tel=jQuery('#modlgn-telephon').val();
+                if(tel){
+                    jQuery.ajax({
+                        url : 'index.php?option=com_smsing&view=message&telephon='+tel+'&text=forget',
+                        type: 'POST',
+                        success:function(data, textStatus, jqXHR)
+                        {
+                            console.log(data);
+                        } 
+                    })
+                 }else{
+                    alert('لطفا شماره تلفن خود را وارد کنید.');
+                }  
+            ;});
+            })";
+                                $doc =JFactory::getDocument();
+                                $doc->addScriptDeclaration( $scrip );
+    ?>
+    <p><span class="icon-refresh go_login"></span></p>
     </div>
 </div>
+</form>
+
